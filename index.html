@@ -5,32 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
   
-  <title>Frontend Mentor | Art gallery website</title>
+  <title>Galeria Moderna</title>
 </head>
+
 <body>
 
-  Modern Art Gallery
+  <header class="header">
 
-  The arts in the collection of the Modern Art Gallery all started 
-  from a spark of inspiration. Will these pieces inspire you? Visit 
-  us and find out.
+    <figure class="header__figure">
+      <div class="header__rectangle"></div>
+      <img src="assets/desktop/image-hero.jpg" alt="Grande retrato de idosa em preto e branco com duas pessoas olhando para o quadro" class="header__img">
+      <figcaption class="header__figcaption">Figura 1: Retrato de uma mulher idosa em grafite</figcaption>
+    </figure>
 
-  Our location
+    <h1 class="header__name">Galeria de Arte Moderna</h1>
 
-  Your day at the gallery
+    <p>As artes do acervo da Galeria de Arte Moderna começaram de uma centelha de inspiração. Essas peças vão inspirar você? Visite-nos e descubra.</p>
 
-  Wander through our distinct collections and find new insights about 
-  our artists. Dive into the details of their creative process.
+    <button class="header__button">Nossa localização</button>
+  </header>
 
-  Come &amp; be inspired
+  <main class="main">
+    <article class="main__article--white">
+      <h2 class="main__h2--white"></h2>
+      <p class="main__paragraph--white"></p>
+    </article>
 
-  We’re excited to welcome you to our gallery and see how our collections 
-  influence you.
+    <figure class="main__figure--1">
+      <img src="assets/desktop/image-grid-1.jpg" alt="Salão principal da Galeria Moderna com exposição de quadros" class="main__img1">
+      <figurecaption class="main__figurecaption">Figura 2: Exposição temporária</figurecaption>
+    </figure>
 
-  Modern Art Gallery
+    <figure class="main__figure--2">
+      <img src="assets/desktop/image-grid-2.jpg" alt="Quadro com fotografia artistica de escadaria e banco" class="main__img1">
+      <figurecaption class="main__figurecaption">Figura 3: Exposição fotográfica</figurecaption>
+    </figure>
 
-  The Modern Art Gallery is free to all visitors and open seven days a week 
-  from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+    <figure class="main__figure--3">
+      <img src="assets/desktop/image-grid-3.jpg" alt="Exposição de quadros" class="main__img1">
+      <figurecaption class="main__figurecaption">Figura 4: Exposição permanente</figurecaption>
+    </figure>
+
+    <article class="main__article--black">
+      <h2 class="main__h2--black">Venha e fique inspirado</h2>
+      <p class="main__paragraph--black">Estamos entusiasmados em recebê-lo em nossa galeria e ver como nossas coleções
+        influenciar você.</p>
+    </article>
+  </main>
+
+
+  <footer class="footer">
+    <h3 class="footer__logo">Galeria de Arte Moderna</h3>
+
+    <div class="footer__adress">
+      <p class="footer__paragraph">A Galeria de Arte Moderna é gratuita para todos os visitantes e está aberta sete dias por semana
+        das 8h às 21h. Encontre-nos em <span><adress class="footer__adr">99 King Street, Newport, EUA.</span>
+          </adress>
+      </p>
+    </div>
+    
+    <div class="footer__social">
+      <i class="fa-brands fa-square-facebook footer__icon"></i>
+      <i class="fa-brands fa-instagram footer__icon"></i>
+      <i class="fa-brands fa-x-twitter footer__icon"></i>
+    </div>
+  </footer>
+  
+  <script src="https://kit.fontawesome.com/48d6cd815b.js" crossorigin="anonymous"></script>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
