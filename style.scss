@@ -1,0 +1,25 @@
+@import 'scss/reset';  
+@import 'scss/variables.scss';  
+@import 'scss/mixins';  
+
+body {
+    font-family: $ff-paragrafo;
+    color: $cor-grafite;
+    text-align: left;
+}
+
+.header {
+    @include flexCenter(row);
+    
+    &__figure {
+        @include flexCenter(row);
+    }
+
+    &__container {
+        @include flexCenter(column);
+    }
+
+    &__rectangle {
+
+    }
+}

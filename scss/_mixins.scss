@@ -1,0 +1,26 @@
+/* Mixin Display Flex */
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+/* Mixin Articles */
+@mixin articles {
+    
+    &__article {
+        @include flexCenter(column);
+    }
+
+    &__h2 {
+        font-family: $ff-titulo;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    &__paragraph {
+        font-family: inherit;
+        text-align: inherit;
+    }
+}

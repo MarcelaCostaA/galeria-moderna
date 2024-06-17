@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* Box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Margem */
+* {
+  margin: 0;
+}
+
+/* Tipografia */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mídia */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Fontes */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Overflow */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Cores */
+/* Fontes */
+/* Mixin Display Flex */
+/* Mixin Articles */
+body {
+  font-family: "Outfit", sans-serif;
+  color: #444444;
+  text-align: left;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.header__figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */
