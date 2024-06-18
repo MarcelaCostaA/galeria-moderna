@@ -9,18 +9,35 @@
 /* Mixin Articles */
 @mixin articles {
     
-    &__article {
-        @include flexCenter(column);
-    }
+    .main {
 
-    &__h2 {
-        font-family: $ff-titulo;
-        text-align: left;
-        text-transform: uppercase;
-    }
+        &__article {
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+        }
+    
+        &__h2 {
+            font-family: $ff-subtitulo;
+            font-size: $fs-subtitulo;
+            font-weight: $fw-subtitulo;
+            line-height: 1;
+            letter-spacing: $ls-subtitulo;
+            text-align: left;
+            text-transform: uppercase;
+            padding-top: 2.125rem;
+        }
+    
+        &__paragraph {
+            padding-top: 2.125rem;
+            font-family: $ff-paragrafo;
+            font-size: $fs-paragrafo;
+            font-weight: $fw-paragrafo;
+            letter-spacing: $ls-paragrafo;
+            text-align: left;
+        }
 
-    &__paragraph {
-        font-family: inherit;
-        text-align: inherit;
     }
+    
 }

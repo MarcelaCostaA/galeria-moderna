@@ -25,37 +25,33 @@ body {
         height: 800px;
         background-color: $cor-preto;
     }
+
+    &__h1 {
+        font-size: $fs-titulo;
+    }
 }
 
 .main {
-    margin: 11.19rem 10.3125rem 0 10.3125rem;
+    margin: 11.19rem auto 0 auto;
+    margin-top: 11.19rem;
     width: 69.375rem;
     height: 71.875rem;
     display: grid;
-    grid-template-columns: 40.09% auto 40.09%;
-    grid-template-rows: 34.78% auto 32.78%;
+    grid-template-columns: 40.09% 152px 40.09%;
+    grid-template-rows: 34.78% 313px 32.78%;
     grid-template-areas:
         'article1 img1 img1'
         'img2 img2 img3'
         'img2 img2 article2';
-    grid-gap: 2.125rem;
+    grid-gap: $gg-gap;
     
-
     &__article {
-        //width: 445px; // substituir por margin e padding
-        //height: 377px; // substituir por margin e padding
-    }
-
-    &__h2 {
-        font-family: $fs-subtitulo;
-    }
-
-    &__paragraph {
-        font-family: $ff-paragrafo;
+        @include articles;
     }
 
     /* Article com fundo branco e letras escuras */
     &__article-1 {
+        padding-right: calc($pm-pattern * 2);
         grid-area: 'article1';
         color: $cor-grafite;
     }
@@ -70,6 +66,7 @@ body {
 
     /* Article com fundo preto e letras brancas */
     &__article-2 {
+        padding: $pm-pattern;
         grid-area: 'article2';
         background-color: $cor-preto;
     }
@@ -82,20 +79,53 @@ body {
         color: $cor-branco
     }
 
+    &__img1, &__img2, &__img3 {
+        margin: 0;
+        width: 100%;
+    }
+
     &__img1 {
-        grid-area: 'img1';
+        grid-area: img1;
     }
 
-    &__figure-2 {
-        grid-area: 'img2';
+    &__img2 {
+        height: 100%;
+        grid-area: img2;
     }
 
-    &__figure-3 {
-        grid-area: 'img3';
+    &__img3 {
+        grid-area: img3;
     }
 
+    /*
     &__img1, &__img2, &__img3 {
         object-fit: fit;
+    } */
+
+}
+
+.footer {
+    @include flexCenter(row);
+
+    &__logo {
+
     }
 
+    &__adress {
+
+    }
+
+    &__paragraph {
+
+    }
+
+    &__adr {
+
+    }
+
+    &__social {
+        @include flexCenter(row);
+
+
+    }
 }

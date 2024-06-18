@@ -4,22 +4,32 @@ $cor-preto: #151515;
 $cor-grafite: #444444;
 $cor-realce: #d5966c;
 
+/* Margem - Padding - Gap */
+$gg-gap: 2.125rem;
+$pm-pattern: 2.125rem; /* Padding ou margem padrão */
+
 /* Famílias de Fontes */
 $ff-titulo: "Big Shoulders Display", sans-serif;
-$ff-paragrafo: "Outfit", sans-serif;
+$ff-subtitulo: "Big Shoulders Display", sans-serif;
+$ff-paragrafo: Outfit, sans-serif;
 
 /* Tamanhos de Fontes */
-$fs-titulo: clamp(55px, 6.66vw, 127px);
-$fs-subtitulo: clamp(45px, 4.86vw, 93px); 
-$fs-localiza: clamp(32px, 4.16vw, 79px);
-$fs-logo: clamp(20px, 2.5vw, 48px);
-$fs-paragrafo: clamp(28px, 1.53vw, 30px); 
-$fs-adress: clamp(18px, 1.25vw, 22px); 
+$fs-titulo: 6.66vw;
+$fs-subtitulo: 4.5vw; //!
+$fs-localiza: 4.16vw;
+$fs-logo: 2.5vw;
+$fs-paragrafo: 1.5vw; //!
+$fs-adress: 1.25vw; 
+
+/* Font Weight */
+$fw-titulo: 800;
+$fw-subtitulo:  800; //!
+$fw-paragrafo: 300; //!
 
 /* Espaço entre Letras */
 $ls-titulo: 6.11vw;
-$ls-subtitulo: 4.86vw; 
+$ls-subtitulo: 0.1vw; //!
 $ls-localiza: 3.47vw;
 $ls-logo: 2.22vw;
-$ls-paragrafo: 2.22vw; 
+$ls-paragrafo: 0.05vw; //!
 $ls-adress: 1.94vw;
