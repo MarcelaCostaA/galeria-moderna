@@ -10,6 +10,7 @@ body {
 
 .header {
     @include flexCenter(row);
+    margin: 0;
     
     &__figure {
         @include flexCenter(row);
@@ -27,21 +28,22 @@ body {
 }
 
 .main {
-    margin: 0 auto;
+    margin: 11.19rem 10.3125rem 0 10.3125rem;
     width: 69.375rem;
-    height: 77.43vw;
+    height: 71.875rem;
     display: grid;
-    grid-template-columns: 30.90vw auto 10.55vw auto 30.90vw
-    grid-template-rows: auto auto;
+    grid-template-columns: 40.09% auto 40.09%;
+    grid-template-rows: 34.78% auto 32.78%;
+    grid-template-areas:
+        'article1 img1 img1'
+        'img2 img2 img3'
+        'img2 img2 article2';
+    grid-gap: 2.125rem;
+    
 
     &__article {
-        width: 445px;
-        height: 377px;
-    }
-
-    &__article--white {
-        grid-area: 'article-white';
-        color: $cor-grafite;
+        //width: 445px; // substituir por margin e padding
+        //height: 377px; // substituir por margin e padding
     }
 
     &__h2 {
@@ -52,47 +54,48 @@ body {
         font-family: $ff-paragrafo;
     }
 
-    &__h2--white {
-        color: $cor-preto;
-    }
-
-    &__paragraph--white {
+    /* Article com fundo branco e letras escuras */
+    &__article-1 {
+        grid-area: 'article1';
         color: $cor-grafite;
     }
 
-    &__article--black {
-        grid-area: 'article-black';
+    &__h2-1 {
+        color: $cor-preto;
+    }
+
+    &__paragraph-1 {
+        color: $cor-grafite;
+    }
+
+    /* Article com fundo preto e letras brancas */
+    &__article-2 {
+        grid-area: 'article2';
         background-color: $cor-preto;
     }
 
-    &__h2--black {
+    &__h2-2 {
         color: $cor-branco;
     }
 
-    &__paragraph--black {
+    &__paragraph-2 {
         color: $cor-branco
     }
 
-    &__figure--1 {
-        width: 635px;
-        height: 400px;
-        grid-area: 'imagem-1';
+    &__img1 {
+        grid-area: 'img1';
+    }
+
+    &__figure-2 {
+        grid-area: 'img2';
+    }
+
+    &__figure-3 {
+        grid-area: 'img3';
     }
 
     &__img1, &__img2, &__img3 {
         object-fit: fit;
-    }
-
-    &__figure--2 {
-        width: 635px;
-        height: 720px;
-        grid-area: 'imagem-2';
-    }
-
-    &__figure--3 {
-        width: 445px;
-        height: 313px;
-        grid-area: 'imagem-3';
     }
 
 }
