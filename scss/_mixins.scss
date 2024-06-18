@@ -26,11 +26,11 @@
             letter-spacing: $ls-subtitulo;
             text-align: left;
             text-transform: uppercase;
-            padding-top: 2.125rem;
+            padding-top: $pm-pattern;
         }
     
         &__paragraph {
-            padding-top: 2.125rem;
+            padding-top: $pm-pattern;
             font-family: $ff-paragrafo;
             font-size: $fs-paragrafo;
             font-weight: $fw-paragrafo;

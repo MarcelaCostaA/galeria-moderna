@@ -7,6 +7,7 @@ $cor-realce: #d5966c;
 /* Margem - Padding - Gap */
 $gg-gap: 2.125rem;
 $pm-pattern: 2.125rem; /* Padding ou margem padrão */
+$mt-margin-top:  11.19rem;
 
 /* Famílias de Fontes */
 $ff-titulo: "Big Shoulders Display", sans-serif;
@@ -19,17 +20,19 @@ $fs-subtitulo: 4.5vw; //!
 $fs-localiza: 4.16vw;
 $fs-logo: 2.5vw;
 $fs-paragrafo: 1.5vw; //!
-$fs-adress: 1.25vw; 
+$fs-adress: 1.2vw; 
 
 /* Font Weight */
 $fw-titulo: 800;
 $fw-subtitulo:  800; //!
+$fw-logo: 800; //!
 $fw-paragrafo: 300; //!
+$fw-adress: 200; //!
 
 /* Espaço entre Letras */
 $ls-titulo: 6.11vw;
 $ls-subtitulo: 0.1vw; //!
 $ls-localiza: 3.47vw;
-$ls-logo: 2.22vw;
+$ls-logo: 0.1vw;
 $ls-paragrafo: 0.05vw; //!
-$ls-adress: 1.94vw;
+$ls-adress: 0.05vw; //!

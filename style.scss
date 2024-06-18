@@ -32,8 +32,8 @@ body {
 }
 
 .main {
-    margin: 11.19rem auto 0 auto;
-    margin-top: 11.19rem;
+    margin: $mt-margin-top auto 0 auto;
+    margin-top: $mt-margin-top;
     width: 69.375rem;
     height: 71.875rem;
     display: grid;
@@ -106,26 +106,47 @@ body {
 
 .footer {
     @include flexCenter(row);
+    justify-content: space-between;
+    align-items: start;
+    margin-top: $mt-margin-top;
+    padding: calc($pm-pattern * 2) calc($pm-pattern * 3);
+    background-color: $cor-preto;
 
     &__logo {
-
+        width: 180px;
+        font-family: $ff-titulo;
+        font-size: $fs-logo;
+        font-weight: $fw-logo;
+        line-height: 1;
+        letter-spacing: $ls-logo;
+        text-align: left;
+        text-transform: uppercase;
+        color: $cor-branco;
     }
 
     &__adress {
-
-    }
-
-    &__paragraph {
-
+        width: 450px;
+        font-family: $ff-paragrafo;
+        font-size: $fs-adress;
+        font-weight: $fw-adress;
+        letter-spacing: $ls-adress;
+        text-align: left;
+        color: $cor-branco;
     }
 
     &__adr {
-
+        font-weight: 600;
     }
 
     &__social {
         @include flexCenter(row);
 
+        justify-content: space-between;
+    }
 
+    &__icon {
+        padding-left: calc($pm-pattern / 2);
+        font-size: 1.5rem;
+        color: $cor-branco;
     }
 }
