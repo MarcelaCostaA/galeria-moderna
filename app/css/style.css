@@ -34,6 +34,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Cores */
 /* Margem - Padding - Gap */
 /* Padding ou margem padrão */
+/* Margem superior que separa os blocos de conteúdo header de main e main de footer */
 /* Famílias de Fontes */
 /* Tamanhos de Fontes */
 /* Font Weight */
@@ -47,31 +48,86 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 0;
-}
-.header__figure {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  width: 100%;
+  height: 55.55vw;
+  position: relative;
 }
 .header__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 31.25% 37.5% 31.25%;
+  grid-template-areas: "preto img branco";
+  z-index: 0;
 }
-.header__rectangle {
-  width: 450px;
-  height: 800px;
+.header__rectangle-black {
+  content: "";
+  width: 100%;
+  height: 100%;
+  grid-area: preto;
   background-color: #151515;
 }
+.header__img {
+  width: 100%;
+  height: 100%;
+  grid-area: img;
+}
+.header__rectangle-white {
+  content: "";
+  width: 100%;
+  height: 100%;
+  grid-area: branco;
+  background-color: white;
+}
+.header__container-texts {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 12.75rem;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 19.56rem;
+  z-index: 1;
+}
 .header__h1 {
+  font-family: "Big Shoulders Display", sans-serif;
   font-size: 6.66vw;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.12vw;
+  text-align: left;
+  text-transform: uppercase;
+  padding-top: 2.125rem;
+}
+.header__paragraph {
+  font-family: Outfit, sans-serif;
+  font-size: 1.5vw;
+  font-weight: 300;
+  letter-spacing: 0.05vw;
+  text-align: left;
+}
+.header__btn {
+  @i margin-top: 3rem;
+}
+.header__btn-text {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 700;
+  letter-spacing: 0.2vw;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 1.25rem 1.5rem;
+  border: none;
+  background-color: #151515;
+  color: white;
+}
+.header____arrow-r {
+  display: inline-block;
+  background-color: #d5966c;
+  color: white;
 }
 
 .main {
@@ -197,4 +253,9 @@ body {
   padding-left: 1.0625rem;
   font-size: 1.5rem;
   color: white;
+}
+.footer__icon:hover, .footer__adr:hover {
+  color: #d5966c;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
