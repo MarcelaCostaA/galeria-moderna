@@ -120,7 +120,7 @@ body {
   letter-spacing: 0.05vw;
   text-align: left;
 }
-.header__btn-r {
+.header__btn-r, .main__btn-l {
   width: 16.875rem;
   height: 4.5rem;
   position: relative;
@@ -129,13 +129,13 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  background-image: linear-gradient(to right, #151515 80%, #d5966c 20%);
+  background: linear-gradient(to right, #d5966c 80%, #151515 80%);
   transition: all 0.3s ease-in-out;
 }
-.header__btn-r:hover {
-  background-image: linear-gradient(to right, #d5966c 80%, #151515 20%);
+.header__btn-r:hover, .main__btn-l:hover {
+  background: linear-gradient(to right, #151515 80%, #d5966c 80%);
 }
-.header__btn-text {
+.header__btn-text, .main__btn-text {
   position: absolute;
   width: 70%;
   height: 100%;
@@ -173,8 +173,11 @@ body {
   grid-template-rows: 34.78% 313px 32.78%;
   grid-template-areas: "article1 img1 img1" "img2 img2 img3" "img2 img2 article2";
   grid-gap: 2.125rem;
+  /* Página Home */
   /* Article com fundo branco e letras escuras */
+  /* Página Home */
   /* Article com fundo preto e letras brancas */
+  /* Página Localização */
 }
 .main__article .main__article {
   display: flex;
@@ -236,19 +239,82 @@ body {
 .main__img3 {
   grid-area: img3;
 }
+.main--location {
+  position: relative;
+}
+.main__btn-l {
+  position: absolute;
+  margin-top: 0;
+  margin-left: 10.625rem;
+  margin-right: 10.625rem;
+  background: linear-gradient(to right, #d5966c 20%, #151515 20%);
+  transition: all 0.3s ease-in-out;
+}
+.main__btn-l:hover {
+  background: linear-gradient(to right, #151515 20%, #d5966c 20%);
+}
+.main__btn-text {
+  top: 0;
+  right: 5%;
+  text-align: right;
+}
+.main__btn-svg-l {
+  position: absolute;
+  width: 5%;
+  height: 40%;
+  top: 30%;
+  left: 7.5%;
+  display: block;
+  color: white;
+  z-index: 2;
+}
+.main__map-jpg {
+  margin: 0 auto;
+}
+.main__article-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10.625rem;
+  justify-content: start;
+  background-color: #151515;
+}
+.main__h2-2 {
+  text-transform: uppercase;
+  color: white;
+}
+.main__h3--location {
+  /*
+  font-family: $ff-titulo;
+  font-size: $fs-titulo;
+  font-weight: $fw-titulo;
+  line-height: 1;
+  letter-spacing: $ls-titulo;
+  text-align: left;
+  text-transform: uppercase;
+  padding-top: $pm-pattern;
+  */
+  color: #d5966c;
+}
+.main__paragraph-2 {
+  color: white;
+}
 
-.footer {
+.footer, .footer--location {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  margin-top: 11.19rem;
+  margin-top: 0;
   padding: 4.25rem 6.375rem;
   background-color: #151515;
+  /* Footer do Página Home*/
+  /* Footer da Página Localização */
 }
-.footer__logo {
+.footer__logo, .footer__logo--location {
   width: 180px;
   font-family: "Big Shoulders Display", sans-serif;
   font-size: clamp(2.18rem, 2.131rem + 0.2242vw, 2.4rem);
@@ -259,7 +325,7 @@ body {
   text-transform: uppercase;
   color: white;
 }
-.footer__adress {
+.footer__adress, .footer__adress--location {
   width: 450px;
   font-family: Outfit, sans-serif;
   font-size: clamp(1.125rem, 1.086rem + 0.1783vw, 1.3rem);
@@ -268,7 +334,7 @@ body {
   text-align: left;
   color: white;
 }
-.footer__adr {
+.footer__adr, .footer__adr--location:hover, .footer__adr--location {
   font-weight: 600;
 }
 .footer__social {
@@ -278,13 +344,31 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
-.footer__icon {
+.footer__icon, .footer__icon--location:hover, .footer__icon--location {
   padding-left: 1.0625rem;
   font-size: 1.5rem;
   color: white;
 }
-.footer__icon:hover, .footer__adr:hover {
+.footer__icon:hover, .footer__icon--location:hover, .footer__adr:hover, .footer__adr--location:hover {
   color: #d5966c;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+.footer--location {
+  background-color: #d5966c;
+}
+.footer__logo--location {
+  color: #151515;
+}
+.footer__adress--location {
+  color: #151515;
+}
+.footer__icon--location {
+  color: #151515;
+}
+.footer__icon--location:hover {
+  color: white;
+}
+.footer__adr--location:hover {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
