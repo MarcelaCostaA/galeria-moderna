@@ -184,6 +184,7 @@ body {
   /* Botão de Voltar */
   /* Mapa */
   /* Article 3 - fundo preto e letras brancas */
+  /* Endereço */
 }
 .main__article .main__article {
   display: flex;
@@ -286,28 +287,30 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding: 10.625rem;
-  justify-content: start;
+  justify-content: space-between;
+  align-items: start;
+  padding: 4.25rem 6.375rem;
   background-color: #151515;
+}
+.main__section-adress {
+  padding-top: 2.125rem;
+  padding-left: 19.125rem;
 }
 .main__h2-2 {
   text-transform: uppercase;
   color: white;
 }
 .main__h3--location {
-  /*
-  font-family: $ff-titulo;
-  font-size: $fs-titulo;
-  font-weight: $fw-titulo;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: clamp(2.18rem, 2.131rem + 0.2242vw, 2.4rem);
+  font-weight: 800;
   line-height: 1;
-  letter-spacing: $ls-titulo;
-  text-align: left;
+  letter-spacing: 0.1vw;
   text-transform: uppercase;
-  padding-top: $pm-pattern;
-  */
   color: #d5966c;
 }
-.main__paragraph-2 {
+.main__paragraph--location {
+  padding-top: 4.25rem;
   color: white;
 }
 
@@ -365,6 +368,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .footer--location {
+  margin-top: 0;
   background-color: #d5966c;
 }
 .footer__logo--location {

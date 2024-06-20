@@ -259,10 +259,19 @@ body {
     &__article-3 {
         @include flexCenter(row);
 
-        padding: calc($pm-pattern * 5);
+        justify-content: space-between;
+        align-items: start;
+        //margin-top: $mt-margin-top;
+        padding: calc($pm-pattern * 2) calc($pm-pattern * 3);
+        //padding: calc($pm-pattern * 5);
         //padding: $pm-pattern;
-        justify-content: start;
+        //justify-content: start;
         background-color: $cor-preto;
+    }
+
+    &__section-adress {
+        padding-top: $pm-pattern;
+        padding-left: calc($pm-pattern * 9);
     }
 
     &__h2-2 {
@@ -270,21 +279,19 @@ body {
         color: $cor-branco;
     }
 
+    /* Endereço */
     &__h3--location {
-        /*
         font-family: $ff-titulo;
-        font-size: $fs-titulo;
-        font-weight: $fw-titulo;
+        font-size: $fs-logo;
+        font-weight: $fw-logo;
         line-height: 1;
-        letter-spacing: $ls-titulo;
-        text-align: left;
+        letter-spacing: $ls-logo;
         text-transform: uppercase;
-        padding-top: $pm-pattern;
-        */
         color: $cor-realce;
    }
 
-    &__paragraph-2 {
+    &__paragraph--location {
+        padding-top: calc(2 * $pm-pattern);
         color: $cor-branco
     }
 
@@ -351,6 +358,7 @@ body {
     &--location {
         @extend .footer;
 
+        margin-top: 0;
         background-color: $cor-realce;
     }
 
