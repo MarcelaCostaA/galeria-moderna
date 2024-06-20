@@ -1,4 +1,4 @@
-@import 'scss/reset';  
+@import 'scss/reset.scss';
 @import 'scss/variables.scss';  
 @import 'scss/mixins';  
 
@@ -51,8 +51,8 @@ body {
         height: 100%;
         top: 0;
         left: 0;
-        padding: calc($pm-pattern * 5);
-        margin-top: 3rem;
+        padding: $p-patternx5;
+        margin-top: $m-top-3r;
         position: absolute;
         display: grid;
         grid-template-columns: 1.6fr 1fr;
@@ -68,7 +68,7 @@ body {
         letter-spacing: $ls-titulo;
         text-align: left;
         text-transform: uppercase;
-        padding: $pm-pattern 0 0 0;
+        padding: $p-pattern 0 0 0;
         color: white;
         mix-blend-mode: difference;
     }
@@ -78,7 +78,7 @@ body {
 
         justify-content: start;
         align-items: start;
-        padding-top: $pm-pattern;
+        padding-top: $p-pattern;
         position: relative;
     }
 
@@ -95,7 +95,7 @@ body {
         width: 16.875rem;
         height: 4.5rem;
         position: relative;
-        margin-top: 4rem;
+        margin-top: $m-top-4r;
         white-space: nowrap;
         border: none;
         outline: none;
@@ -121,7 +121,7 @@ body {
         text-align: center;
         text-transform: uppercase;
         text-decoration: none;
-        padding: 1.25rem 1.5rem;
+        padding: $p-button;
         border: none;
         color: $cor-branco;
     }
@@ -140,8 +140,8 @@ body {
 }
 
 .main {
-    margin: $mt-margin-top auto 0 auto;
-    margin-top: $mt-margin-top;
+    margin: $m-top-11r auto 0 auto;
+    //margin-top: $m-top-11r;
     width: 69.375rem;
     height: 71.875rem;
     display: grid;
@@ -160,7 +160,7 @@ body {
     /* Página Home */
     /* Article 1 - fundo branco e letras escuras */
     &__article-1 {
-        padding-right: calc($pm-pattern * 2);
+        padding-right: $p-patternx2;
         grid-area: 'article1';
         color: $cor-grafite;
     }
@@ -176,7 +176,7 @@ body {
     /* Página Home */
     /* Article 2 - fundo preto e letras brancas */
     &__article-2 {
-        padding: $pm-pattern;
+        padding: $p-pattern;
         grid-area: 'article2';
         background-color: $cor-preto;
     }
@@ -261,17 +261,13 @@ body {
 
         justify-content: space-between;
         align-items: start;
-        //margin-top: $mt-margin-top;
-        padding: calc($pm-pattern * 2) calc($pm-pattern * 3);
-        //padding: calc($pm-pattern * 5);
-        //padding: $pm-pattern;
-        //justify-content: start;
+        padding: $p-patternx2 $p-patternx3;
         background-color: $cor-preto;
     }
 
     &__section-adress {
-        padding-top: $pm-pattern;
-        padding-left: calc($pm-pattern * 9);
+        padding-top: $p-pattern;
+        padding-left: $p-patternx9;
     }
 
     &__h2-2 {
@@ -291,7 +287,7 @@ body {
    }
 
     &__paragraph--location {
-        padding-top: calc(2 * $pm-pattern);
+        padding-top: $p-patternx2;
         color: $cor-branco
     }
 }
@@ -301,8 +297,8 @@ body {
 
     justify-content: space-between;
     align-items: start;
-    margin-top: $mt-margin-top;
-    padding: calc($pm-pattern * 2) calc($pm-pattern * 3);
+    margin-top: $m-top-11r;
+    padding: $p-patternx2 $p-patternx3;
     background-color: $cor-preto;
 
     /* Footer do Página Home*/
@@ -339,7 +335,7 @@ body {
     }
 
     &__icon {
-        padding-left: calc($pm-pattern / 2);
+        padding-left: $p-patternx2;
         font-size: 1.5rem;
         color: $cor-branco;
     }

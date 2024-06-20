@@ -5,11 +5,24 @@ $cor-grafite: #444444;
 $cor-realce: #d5966c;
 
 /* Margem - Padding - Gap */
+
 /* Gap */
 $gg-gap: 2.125rem;
 $gg-texts: 12rem;
-$pm-pattern: 2.125rem; /* Padding ou margem padrão */
-$mt-margin-top:  11.19rem; /* Margem superior que separa os blocos de conteúdo header de main e main de footer */
+
+/* Margens */
+$m-top-3r: 3rem; // margin-top
+$m-top-4r: 4rem; // margin-top
+$m-top-11r:  11.19rem; /* Margem superior que separa os blocos de conteúdo header de main e main de footer */
+
+/* Padding */
+$p-button: 1.25rem 1.5rem;
+$p-small: 1.0625rem;
+$p-pattern: 2.125rem; /* Padding ou margem padrão */
+$p-patternx2: 2 * $p-pattern;
+$p-patternx3: 3 * $p-pattern;
+$p-patternx5: 5 * $p-pattern; 
+$p-patternx9: 9 * $p-pattern; 
 
 /* Famílias de Fontes */
 $ff-titulo: "Big Shoulders Display", sans-serif;
