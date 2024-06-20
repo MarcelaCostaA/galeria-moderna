@@ -31,14 +31,20 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-/* Cores !!! Resolvido !!!  */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Cores */
 /* Margem - Padding - Gap */
+/* Gap */
 /* Padding ou margem padrão */
 /* Margem superior que separa os blocos de conteúdo header de main e main de footer */
-/* Famílias de Fontes !!! Resolvido !!!  */
-/* Tamanhos de Fontes !!! Resolvido !!! */
-/* Font Weight !!! Resolvido !!!  */
-/* Espaço entre Letras !!! Resolvido !!!  */
+/* Famílias de Fontes */
+/* Tamanhos de Fontes */
+/* Font Weight */
+/* Espaço entre Letras  */
 /* Mixin Display Flex */
 /* Mixin Articles */
 body {
@@ -385,4 +391,20 @@ body {
 }
 .footer__adr--location:hover {
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* Media Queries */
+/* Reduce Motion */
+@media only screen and (prefers-reduced-motion) {
+  .reduce-motion,
+  .reduce-motion::before,
+  .reduce-motion::after {
+    animation-delay: 0s !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.0001ms !important;
+    transition-delay: 0s !important;
+  }
+}
+/* Tablet */
+/* Mobile*//*# sourceMappingURL=style.css.map */

@@ -57,7 +57,7 @@ body {
         display: grid;
         grid-template-columns: 1.6fr 1fr;
         grid-template-rows: 1fr;
-        grid-gap: 12rem;
+        grid-gap: $gg-texts;
     }
 
     &__h1 {
@@ -294,10 +294,6 @@ body {
         padding-top: calc(2 * $pm-pattern);
         color: $cor-branco
     }
-
-
-
-
 }
 
 .footer {
@@ -396,3 +392,23 @@ body {
         color: $cor-branco;
     }
 }
+
+/* Media Queries */
+
+/* Reduce Motion */
+@media only screen and (prefers-reduced-motion) {
+    .reduce-motion,
+    .reduce-motion::before,
+    .reduce-motion::after {
+      animation-delay: 0s !important;
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important; 
+      transition-duration: .0001ms !important;
+      transition-delay: 0s !important;
+    }
+}
+
+/* Tablet */
+
+/* Mobile*/
+  

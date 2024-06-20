@@ -1,20 +1,22 @@
-/* Cores !!! Resolvido !!!  */
+/* Cores */
 $cor-branco: white;
 $cor-preto: #151515;
 $cor-grafite: #444444;
 $cor-realce: #d5966c;
 
 /* Margem - Padding - Gap */
+/* Gap */
 $gg-gap: 2.125rem;
+$gg-texts: 12rem;
 $pm-pattern: 2.125rem; /* Padding ou margem padrão */
 $mt-margin-top:  11.19rem; /* Margem superior que separa os blocos de conteúdo header de main e main de footer */
 
-/* Famílias de Fontes !!! Resolvido !!!  */
+/* Famílias de Fontes */
 $ff-titulo: "Big Shoulders Display", sans-serif;
 $ff-subtitulo: "Big Shoulders Display", sans-serif;
 $ff-paragrafo: Outfit, sans-serif;
 
-/* Tamanhos de Fontes !!! Resolvido !!! */ 
+/* Tamanhos de Fontes */ 
 $fs-titulo: clamp(3.75rem, 2.914rem + 3.8217vw, 7.5rem);
 $fs-subtitulo: clamp(3.125rem, 2.8854rem + 1.0955vw, 4.2rem);
 $fs-btn: clamp(1.255rem, 1.2227rem + 0.1478vw, 1.4rem);
@@ -22,18 +24,18 @@ $fs-logo: clamp(2.18rem, 2.131rem + 0.2242vw, 2.4rem);
 $fs-paragrafo: clamp(1.25rem, 1.2166rem + 0.1529vw, 1.4rem);;
 $fs-adress: clamp(1.125rem, 1.086rem + 0.1783vw, 1.3rem);
 
-/* Font Weight !!! Resolvido !!!  */
-$fw-titulo: 900; //!
-$fw-subtitulo:  800; //!
+/* Font Weight */
+$fw-titulo: 900; 
+$fw-subtitulo:  800; 
 $fw-btn: 700;
-$fw-logo: 800; //!
-$fw-paragrafo: 300; //!
-$fw-adress: 200; //!
+$fw-logo: 800; 
+$fw-paragrafo: 300; 
+$fw-adress: 200; 
 
-/* Espaço entre Letras !!! Resolvido !!!  */
-$ls-titulo: 0.15vw; //!!
-$ls-subtitulo: 0.1vw; //!
+/* Espaço entre Letras  */
+$ls-titulo: 0.15vw; 
+$ls-subtitulo: 0.1vw; 
 $ls-btn: 0.2vw;
 $ls-logo: 0.1vw;
-$ls-paragrafo: 0.05vw; //!
-$ls-adress: 0.05vw; //!
+$ls-paragrafo: 0.05vw; 
+$ls-adress: 0.05vw; 
