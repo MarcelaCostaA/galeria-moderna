@@ -14,11 +14,12 @@ $gg-texts: 12rem;
 $m-top-3r: 3rem; // margin-top
 $m-top-4r: 4rem; // margin-top
 $m-top-11r:  11.19rem; /* Margem superior que separa os blocos de conteúdo header de main e main de footer */
+$m-button: 10.625rem;
 
 /* Padding */
 $p-button: 1.25rem 1.5rem;
 $p-small: 1.0625rem;
-$p-pattern: 2.125rem; /* Padding ou margem padrão */
+$p-pattern: 2.125rem;
 $p-patternx2: 2 * $p-pattern;
 $p-patternx3: 3 * $p-pattern;
 $p-patternx5: 5 * $p-pattern; 
@@ -52,3 +53,26 @@ $ls-btn: 0.2vw;
 $ls-logo: 0.1vw;
 $ls-paragrafo: 0.05vw; 
 $ls-adress: 0.05vw; 
+
+/* Breakpoints */
+$mobile: 350px;
+$tablet: 768px;
+$desktop: 1440px;
+$desktop-big: 1920px;
+
+
+@media screen and (max-width: ($tablet - 1px)) {
+
+}
+
+@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+
+}
+
+@media screen and (min-width: $desktop) and (max-width: ($desktop-big - 1px)) {
+
+}
+
+@media screen and (min-width: $desktop-big) {
+
+}

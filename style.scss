@@ -141,7 +141,6 @@ body {
 
 .main {
     margin: $m-top-11r auto 0 auto;
-    //margin-top: $m-top-11r;
     width: 69.375rem;
     height: 71.875rem;
     display: grid;
@@ -219,9 +218,7 @@ body {
         @extend .header__btn-right;
 
         position: absolute;
-        margin-top: 0;
-        margin-left: calc($pm-pattern * 5);
-        margin-right: calc($pm-pattern * 5);
+        margin: 0 $m-button;
         background: linear-gradient(to right, #d5966c 20%, #151515 20%);
         transition: all 0.3s ease-in-out;
     }
@@ -335,7 +332,7 @@ body {
     }
 
     &__icon {
-        padding-left: $p-patternx2;
+        padding-left: $p-small;
         font-size: 1.5rem;
         color: $cor-branco;
     }
