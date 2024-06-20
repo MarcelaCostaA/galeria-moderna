@@ -13,6 +13,7 @@ body {
     height: 55.55vw;
     position: relative;
     
+    /* Background Hero */
     &__container {
         width: 100%;
         height: 100%;
@@ -44,6 +45,7 @@ body {
         background-color: $cor-branco;
     }
 
+    /* Container com Nome da Galeria, Parágrafo de Apresentação e Botão*/
     &__container-texts {
         width: 100%;
         height: 100%;
@@ -53,9 +55,9 @@ body {
         margin-top: 3rem;
         position: absolute;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.6fr 1fr;
         grid-template-rows: 1fr;
-        grid-gap: 19.56rem;
+        grid-gap: 12rem;
     }
 
     &__h1 {
@@ -66,7 +68,7 @@ body {
         letter-spacing: $ls-titulo;
         text-align: left;
         text-transform: uppercase;
-        padding-top: $pm-pattern;
+        padding: $pm-pattern 0 0 0;
         color: white;
         mix-blend-mode: difference;
     }
@@ -88,7 +90,8 @@ body {
         text-align: left;
     }
 
-    &__btn-r {
+    /* Botão Localização */
+    &__btn-right {
         width: 16.875rem;
         height: 4.5rem;
         position: relative;
@@ -101,7 +104,7 @@ body {
         transition: all 0.3s ease-in-out;
     }
 
-    &__btn-r:hover {
+    &__btn-right:hover {
         background: linear-gradient(to right, #151515 80%, #d5966c 80%);
     }
 
@@ -123,7 +126,7 @@ body {
         color: $cor-branco;
     }
     
-    &__btn-svg-r {
+    &__btn-svg-right {
         position: absolute;
         width: 5%;
         height: 40%;
@@ -155,7 +158,7 @@ body {
     }
 
     /* Página Home */
-    /* Article com fundo branco e letras escuras */
+    /* Article 1 - fundo branco e letras escuras */
     &__article-1 {
         padding-right: calc($pm-pattern * 2);
         grid-area: 'article1';
@@ -171,7 +174,7 @@ body {
     }
 
     /* Página Home */
-    /* Article com fundo preto e letras brancas */
+    /* Article 2 - fundo preto e letras brancas */
     &__article-2 {
         padding: $pm-pattern;
         grid-area: 'article2';
@@ -207,10 +210,13 @@ body {
     /* Página Localização */
     &--location {
         position: relative;
+        margin: 0 auto;
+        background-color: $cor-grafite;
     }
 
-    &__btn-l {
-        @extend .header__btn-r;
+    /* Botão de Voltar */
+    &__btn-left {
+        @extend .header__btn-right;
 
         position: absolute;
         margin-top: 0;
@@ -220,7 +226,7 @@ body {
         transition: all 0.3s ease-in-out;
     }
 
-    &__btn-l:hover {
+    &__btn-left:hover {
         background: linear-gradient(to right, #151515 20%, #d5966c 20%);
     }
 
@@ -232,7 +238,7 @@ body {
         text-align: right;
     }
     
-    &__btn-svg-l {
+    &__btn-svg-left {
         position: absolute;
         width: 5%;
         height: 40%;
@@ -243,10 +249,13 @@ body {
         z-index: 2;
     } 
 
+    /* Mapa */
     &__map-jpg {
         margin: 0 auto;
+        object-fit: contain;
     }
 
+    /* Article 3 - fundo preto e letras brancas */
     &__article-3 {
         @include flexCenter(row);
 
@@ -289,13 +298,13 @@ body {
 
     justify-content: space-between;
     align-items: start;
-    margin-top: 0;
+    margin-top: $mt-margin-top;
     padding: calc($pm-pattern * 2) calc($pm-pattern * 3);
     background-color: $cor-preto;
 
     /* Footer do Página Home*/
     &__logo {
-        width: 180px;
+        width: 13.75rem;
         font-family: $ff-titulo;
         font-size: $fs-logo;
         font-weight: $fw-logo;
@@ -307,7 +316,7 @@ body {
     }
 
     &__adress {
-        width: 450px;
+        width: 37.5rem;
         font-family: $ff-paragrafo;
         font-size: $fs-adress;
         font-weight: $fw-adress;

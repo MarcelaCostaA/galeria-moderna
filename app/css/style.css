@@ -51,6 +51,9 @@ body {
   width: 100%;
   height: 55.55vw;
   position: relative;
+  /* Background Hero */
+  /* Container com Nome da Galeria, Parágrafo de Apresentação e Botão*/
+  /* Botão Localização */
 }
 .header__container {
   width: 100%;
@@ -87,9 +90,9 @@ body {
   margin-top: 3rem;
   position: absolute;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr;
   grid-template-rows: 1fr;
-  grid-gap: 19.56rem;
+  grid-gap: 12rem;
 }
 .header__h1 {
   font-family: "Big Shoulders Display", sans-serif;
@@ -99,7 +102,7 @@ body {
   letter-spacing: 0.15vw;
   text-align: left;
   text-transform: uppercase;
-  padding-top: 2.125rem;
+  padding: 2.125rem 0 0 0;
   color: white;
   mix-blend-mode: difference;
 }
@@ -120,7 +123,7 @@ body {
   letter-spacing: 0.05vw;
   text-align: left;
 }
-.header__btn-r, .main__btn-l {
+.header__btn-right, .main__btn-left {
   width: 16.875rem;
   height: 4.5rem;
   position: relative;
@@ -132,7 +135,7 @@ body {
   background: linear-gradient(to right, #d5966c 80%, #151515 80%);
   transition: all 0.3s ease-in-out;
 }
-.header__btn-r:hover, .main__btn-l:hover {
+.header__btn-right:hover, .main__btn-left:hover {
   background: linear-gradient(to right, #151515 80%, #d5966c 80%);
 }
 .header__btn-text, .main__btn-text {
@@ -152,7 +155,7 @@ body {
   border: none;
   color: white;
 }
-.header__btn-svg-r {
+.header__btn-svg-right {
   position: absolute;
   width: 5%;
   height: 40%;
@@ -174,10 +177,13 @@ body {
   grid-template-areas: "article1 img1 img1" "img2 img2 img3" "img2 img2 article2";
   grid-gap: 2.125rem;
   /* Página Home */
-  /* Article com fundo branco e letras escuras */
+  /* Article 1 - fundo branco e letras escuras */
   /* Página Home */
-  /* Article com fundo preto e letras brancas */
+  /* Article 2 - fundo preto e letras brancas */
   /* Página Localização */
+  /* Botão de Voltar */
+  /* Mapa */
+  /* Article 3 - fundo preto e letras brancas */
 }
 .main__article .main__article {
   display: flex;
@@ -241,8 +247,10 @@ body {
 }
 .main--location {
   position: relative;
+  margin: 0 auto;
+  background-color: #444444;
 }
-.main__btn-l {
+.main__btn-left {
   position: absolute;
   margin-top: 0;
   margin-left: 10.625rem;
@@ -250,7 +258,7 @@ body {
   background: linear-gradient(to right, #d5966c 20%, #151515 20%);
   transition: all 0.3s ease-in-out;
 }
-.main__btn-l:hover {
+.main__btn-left:hover {
   background: linear-gradient(to right, #151515 20%, #d5966c 20%);
 }
 .main__btn-text {
@@ -258,7 +266,7 @@ body {
   right: 5%;
   text-align: right;
 }
-.main__btn-svg-l {
+.main__btn-svg-left {
   position: absolute;
   width: 5%;
   height: 40%;
@@ -270,6 +278,8 @@ body {
 }
 .main__map-jpg {
   margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .main__article-3 {
   display: flex;
@@ -308,14 +318,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  margin-top: 0;
+  margin-top: 11.19rem;
   padding: 4.25rem 6.375rem;
   background-color: #151515;
   /* Footer do Página Home*/
   /* Footer da Página Localização */
 }
 .footer__logo, .footer__logo--location {
-  width: 180px;
+  width: 13.75rem;
   font-family: "Big Shoulders Display", sans-serif;
   font-size: clamp(2.18rem, 2.131rem + 0.2242vw, 2.4rem);
   font-weight: 800;
@@ -326,7 +336,7 @@ body {
   color: white;
 }
 .footer__adress, .footer__adress--location {
-  width: 450px;
+  width: 37.5rem;
   font-family: Outfit, sans-serif;
   font-size: clamp(1.125rem, 1.086rem + 0.1783vw, 1.3rem);
   font-weight: 200;
