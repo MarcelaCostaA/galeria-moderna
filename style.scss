@@ -37,6 +37,10 @@ body {
         grid-area: img;
     }
 
+    &__img--tablet, &__img--mobile {
+        display: none;
+    }
+
     &__bg-white{
         content: "";
         width: 100%;
@@ -406,6 +410,221 @@ $desktop-big: 1920px; */
 
 /* Tablet*/
 @media only screen and (min-width: $tablet) and  (max-width: calc($desktop - 1px)) {
+
+    
+    .header {
+        width: 100%;
+        height: 91.15vw;
+        position: relative;
+        
+        /* Background Hero */
+        &__container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 56.90% 43.10%;
+            grid-template-areas:
+            'img .';
+        }
+    
+        &__bg-black, &__bg-white {
+            display: none;
+        }
+    
+        &__img {
+            display: none;
+        }
+
+        &__img--tablet {
+            display: block;
+            width: 100%;
+            height: 100%;
+            grid-area: img;
+        }
+
+        &__img--mobile {
+            display: none;
+        }
+
+        /* Container com Nome da Galeria, Parágrafo de Apresentação e Botão*/
+        &__container-texts {
+            @include flexCenter(column);
+            
+            align-items: start;
+            justify-content: start;
+            gap: 1.5rem;
+
+            margin: 6rem 2.5rem 2.5rem 24rem;
+            padding: 0;
+            width: calc(100% - 26.5rem);       
+        }
+    
+        &__h1 {
+            //margin: 0;
+            //padding: 0;
+            color: black;
+            mix-blend-mode: darken;
+        }
+    
+        &__container-p-btn {
+            @include flexCenter(column);
+            align-items: start;
+            justify-content: start;
+
+            position: relative;
+            padding: 0;
+        }
+    
+    }
+
+    .main {
+        margin: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 56.90% 43.10%;
+        grid-template-rows: 34.78% 313px 32.78%;
+        grid-template-areas:
+            'article1 img1 img1'
+            'img2 img2 img3'
+            'img2 img2 article2';
+        grid-gap: $gg-gap;
+        
+        &__article {
+            @include articles;
+        }
+    
+        /* Página Home */
+        /* Article 1 - fundo branco e letras escuras */
+        &__article-1 {
+            padding-right: $p-patternx2;
+            grid-area: 'article1';
+            color: $cor-grafite;
+        }
+    
+        &__h2-1 {
+            color: $cor-preto;
+        }
+    
+        &__paragraph-1 {
+            color: $cor-grafite;
+        }
+    
+        /* Página Home */
+        /* Article 2 - fundo preto e letras brancas */
+        &__article-2 {
+            padding: $p-pattern;
+            grid-area: 'article2';
+            background-color: $cor-preto;
+        }
+    
+        &__h2-2 {
+            color: $cor-branco;
+        }
+    
+        &__paragraph-2 {
+            color: $cor-branco
+        }
+    
+        &__img1, &__img2, &__img3 {
+            margin: 0;
+            width: 100%;
+        }
+    
+        &__img1 {
+            grid-area: img1;
+        }
+    
+        &__img2 {
+            height: 100%;
+            grid-area: img2;
+        }
+    
+        &__img3 {
+            grid-area: img3;
+        }
+    
+        /* Página Localização */
+        &--location {
+            position: relative;
+            margin: 0 auto;
+            background-color: $cor-grafite;
+        }
+    
+        /* Botão de Voltar */
+        &__btn-left {
+            @extend .header__btn-right;
+    
+            position: absolute;
+            margin: 0 $m-button;
+            background: linear-gradient(to right, #d5966c 20%, #151515 20%);
+            transition: all 0.3s ease-in-out;
+        }
+    
+        &__btn-left:hover {
+            background: linear-gradient(to right, #151515 20%, #d5966c 20%);
+        }
+    
+        &__btn-text {
+            @extend .header__btn-text;
+    
+            top: 0;
+            right: 5%;
+            text-align: right;
+        }
+        
+        &__btn-svg-left {
+            position: absolute;
+            width: 5%;
+            height: 40%;
+            top: 30%;
+            left: 7.5%;
+            display: block;
+            color: $cor-branco;
+            z-index: 2;
+        } 
+    
+        /* Mapa */
+        &__map-jpg {
+            margin: 0 auto;
+            object-fit: contain;
+        }
+    
+        /* Article 3 - fundo preto e letras brancas */
+        &__article-3 {
+            @include flexCenter(row);
+    
+            justify-content: space-between;
+            align-items: start;
+            padding: $p-patternx2 $p-patternx3;
+            background-color: $cor-preto;
+        }
+    
+        &__section-adress {
+            padding-top: $p-pattern;
+            padding-left: $p-patternx9;
+        }
+    
+        &__h2-2 {
+            text-transform: uppercase;
+            color: $cor-branco;
+        }
+    
+        /* Endereço */
+        &__h3--location {
+            font-family: $ff-titulo;
+            font-size: $fs-logo;
+            font-weight: $fw-logo;
+            line-height: 1;
+            letter-spacing: $ls-logo;
+            text-transform: uppercase;
+            color: $cor-realce;
+       }
+    
+        &__paragraph--location {
+            padding-top: $p-patternx2;
+            color: $cor-branco
+        }
+    }
     
 }
 
@@ -427,7 +646,5 @@ $desktop-big: 1920px; */
     }
 }
 
-/* Tablet */
 
-/* Mobile*/
   
