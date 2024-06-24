@@ -242,7 +242,10 @@ body {
 .main__paragraph-2 {
   color: white;
 }
-.main__img1, .main__img2, .main__img3 {
+.main__img--tablet, .main__img--mobile {
+  display: none;
+}
+.main__img {
   margin: 0;
   width: 100%;
 }
@@ -310,7 +313,7 @@ body {
 }
 .main__h3--location {
   font-family: "Big Shoulders Display", sans-serif;
-  font-size: clamp(2.18rem, 2.131rem + 0.2242vw, 2.4rem);
+  font-size: clamp(1.5rem, 1.2994rem + 0.9172vw, 2.4rem);
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.1vw;
@@ -338,7 +341,7 @@ body {
 .footer__logo, .footer__logo--location {
   width: 13.75rem;
   font-family: "Big Shoulders Display", sans-serif;
-  font-size: clamp(2.18rem, 2.131rem + 0.2242vw, 2.4rem);
+  font-size: clamp(1.5rem, 1.2994rem + 0.9172vw, 2.4rem);
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.1vw;
@@ -409,6 +412,7 @@ $desktop-big: 1920px; */
     width: 100%;
     height: 91.15vw;
     position: relative;
+    margin-bottom: 7.5rem;
     /* Background Hero */
     /* Container com Nome da Galeria, Parágrafo de Apresentação e Botão*/
   }
@@ -461,17 +465,19 @@ $desktop-big: 1920px; */
     padding: 0;
   }
   .main {
-    margin: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 89.71%;
+    height: 147.26vw;
     display: grid;
-    grid-template-columns: 56.9% 43.1%;
-    grid-template-rows: 34.78% 313px 32.78%;
+    grid-template-columns: 40.64% auto 40.64%;
+    grid-template-rows: 52.08vw auto 51.56vw;
     grid-template-areas: "article1 img1 img1" "img2 img2 img3" "img2 img2 article2";
-    grid-gap: 2.125rem;
+    grid-gap: 11px;
     /* Página Home */
     /* Article 1 - fundo branco e letras escuras */
     /* Página Home */
     /* Article 2 - fundo preto e letras brancas */
+    /* FALTA COMPLETAR */
     /* Página Localização */
     /* Botão de Voltar */
     /* Mapa */
@@ -503,39 +509,31 @@ $desktop-big: 1920px; */
     text-align: left;
   }
   .main__article-1 {
-    padding-right: 4.25rem;
-    grid-area: "article1";
-    color: #444444;
-  }
-  .main__h2-1 {
-    color: #151515;
-  }
-  .main__paragraph-1 {
-    color: #444444;
+    padding-right: 2rem;
   }
   .main__article-2 {
-    padding: 2.125rem;
-    grid-area: "article2";
-    background-color: #151515;
+    padding: 1rem;
   }
-  .main__h2-2 {
-    color: white;
+  .main__img {
+    display: none;
   }
-  .main__paragraph-2 {
-    color: white;
+  .main__img--mobile {
+    display: none;
   }
-  .main__img1, .main__img2, .main__img3 {
+  .main__img--tablet {
     margin: 0;
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .main__img1 {
+  .main__img1--tablet {
     grid-area: img1;
   }
-  .main__img2 {
+  .main__img2--tablet {
     height: 100%;
     grid-area: img2;
   }
-  .main__img3 {
+  .main__img3--tablet {
     grid-area: img3;
   }
   .main--location {
@@ -592,7 +590,7 @@ $desktop-big: 1920px; */
   }
   .main__h3--location {
     font-family: "Big Shoulders Display", sans-serif;
-    font-size: clamp(2.18rem, 2.131rem + 0.2242vw, 2.4rem);
+    font-size: clamp(1.5rem, 1.2994rem + 0.9172vw, 2.4rem);
     font-weight: 800;
     line-height: 1;
     letter-spacing: 0.1vw;
@@ -601,6 +599,39 @@ $desktop-big: 1920px; */
   }
   .main__paragraph--location {
     padding-top: 4.25rem;
+    color: white;
+  }
+  .footer, .footer--location {
+    height: 28.125vw;
+    margin-top: 7.5rem;
+    padding: 3rem;
+    /* Footer do Página Home*/
+    /* FALTA TERMINAR*/
+    /* Footer da Página Localização */
+  }
+  .footer__logo, .footer__logo--location {
+    width: 10rem;
+  }
+  .footer__adress, .footer__adress--location {
+    width: 30.5rem;
+  }
+  .footer--location {
+    margin-top: 0;
+    background-color: #d5966c;
+  }
+  .footer__logo--location {
+    color: #151515;
+  }
+  .footer__adress--location {
+    color: #151515;
+  }
+  .footer__icon--location {
+    color: #151515;
+  }
+  .footer__icon--location:hover {
+    color: white;
+  }
+  .footer__adr--location:hover {
     color: white;
   }
 }

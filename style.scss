@@ -192,7 +192,11 @@ body {
         color: $cor-branco
     }
 
-    &__img1, &__img2, &__img3 {
+    &__img--tablet, &__img--mobile {
+        display: none;
+    }
+
+    &__img {
         margin: 0;
         width: 100%;
     }
@@ -416,6 +420,7 @@ $desktop-big: 1920px; */
         width: 100%;
         height: 91.15vw;
         position: relative;
+        margin-bottom: 7.5rem;
         
         /* Background Hero */
         &__container {
@@ -460,8 +465,6 @@ $desktop-big: 1920px; */
         }
     
         &__h1 {
-            //margin: 0;
-            //padding: 0;
             color: black;
             mix-blend-mode: darken;
         }
@@ -478,16 +481,17 @@ $desktop-big: 1920px; */
     }
 
     .main {
-        margin: 0;
-        width: 100%;
+        margin: 0 auto;
+        width: 89.71%;
+        height: 147.26vw;
         display: grid;
-        grid-template-columns: 56.90% 43.10%;
-        grid-template-rows: 34.78% 313px 32.78%;
+        grid-template-columns: 40.64% auto 40.64%;
+        grid-template-rows: 52.08vw auto 51.56vw;
         grid-template-areas:
             'article1 img1 img1'
             'img2 img2 img3'
             'img2 img2 article2';
-        grid-gap: $gg-gap;
+        grid-gap: 11px;
         
         &__article {
             @include articles;
@@ -496,53 +500,43 @@ $desktop-big: 1920px; */
         /* Página Home */
         /* Article 1 - fundo branco e letras escuras */
         &__article-1 {
-            padding-right: $p-patternx2;
-            grid-area: 'article1';
-            color: $cor-grafite;
-        }
-    
-        &__h2-1 {
-            color: $cor-preto;
-        }
-    
-        &__paragraph-1 {
-            color: $cor-grafite;
+            padding-right: 2rem;
         }
     
         /* Página Home */
         /* Article 2 - fundo preto e letras brancas */
         &__article-2 {
-            padding: $p-pattern;
-            grid-area: 'article2';
-            background-color: $cor-preto;
+            padding: 1rem;
         }
-    
-        &__h2-2 {
-            color: $cor-branco;
+        
+        &__img {
+            display: none;
         }
-    
-        &__paragraph-2 {
-            color: $cor-branco
+
+        &__img--mobile {
+            display: none;
         }
-    
-        &__img1, &__img2, &__img3 {
+
+        &__img--tablet {
             margin: 0;
             width: 100%;
+            object-fit: cover;
         }
     
-        &__img1 {
+        &__img1--tablet {
             grid-area: img1;
         }
     
-        &__img2 {
+        &__img2--tablet {
             height: 100%;
             grid-area: img2;
         }
     
-        &__img3 {
+        &__img3--tablet {
             grid-area: img3;
         }
     
+        /* FALTA COMPLETAR */
         /* Página Localização */
         &--location {
             position: relative;
@@ -623,6 +617,64 @@ $desktop-big: 1920px; */
         &__paragraph--location {
             padding-top: $p-patternx2;
             color: $cor-branco
+        }
+    }
+
+    .footer {  
+        height: 28.125vw;
+        margin-top: 7.5rem;
+        padding: 3rem;
+    
+        /* Footer do Página Home*/
+        &__logo {
+            width: 10rem;
+        }
+    
+        &__adress {
+            width: 30.5rem;
+        }
+    
+       /* FALTA TERMINAR*/
+        /* Footer da Página Localização */
+        &--location {
+            @extend .footer;
+    
+            margin-top: 0;
+            background-color: $cor-realce;
+        }
+    
+        &__logo--location {
+            @extend .footer__logo;
+    
+            color: $cor-preto;
+        }
+    
+        &__adress--location {
+            @extend .footer__adress;
+    
+            color: $cor-preto;
+        }
+    
+        &__adr--location {
+            @extend .footer__adr;
+        }
+    
+        &__icon--location {
+            @extend .footer__icon;
+    
+            color: $cor-preto;
+        }
+    
+        &__icon--location:hover {
+            @extend .footer__icon;
+    
+            color: $cor-branco;
+        }
+    
+        &__adr--location:hover {
+            @extend .footer__adr;
+    
+            color: $cor-branco;
         }
     }
     
