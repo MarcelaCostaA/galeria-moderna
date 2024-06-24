@@ -409,7 +409,7 @@ $desktop-big: 1920px; */
 
 /* Media Queries */
 /* Tablet*/
-@media only screen and (min-width: $tablet) and  (max-width: calc($desktop - 1px)) {
+@media only screen and (min-width: $tablet) and  (max-width: calc(1200px - 1px)) {
 
     /* Tablet */
     .header {
@@ -586,58 +586,49 @@ $desktop-big: 1920px; */
 }
 
 /* Mobile*/
-@media only screen and (min-width: $mobile) and  (max-width: calc($tablet - 1px)) {
+@media only screen and (min-width: $mobile) and  (max-width: calc(768px - 1px)) {
     
     /* Mobile */
     .header {
+        display: flex;
+        justify-content: start;
+        align-items: start;
         width: 100%;
-        height: 91.15vw;
+        height: 180vw;
         position: relative;
         margin-bottom: 7.5rem;
         
-        /* Background Hero */
+        /* Mobile - Background Hero */
         &__container {
+            display: flex;
+            justify-content: start;
+            align-items: start;
             width: 100%;
-            height: 100%;
-            display: grid;
-            grid-template-columns: 56.90% 43.10%;
-            grid-template-areas:
-            'img .';
+            height: 64vw;
         }
     
-        &__bg-black, &__bg-white {
+        &__bg-black, &__bg-white, &__img, &__img--tablet {
             display: none;
-        }
-    
-        &__img {
-            display: none;
-        }
-
-        &__img--tablet {
-            display: block;
-            width: 100%;
-            height: 100%;
-            grid-area: img;
         }
 
         &__img--mobile {
-            display: none;
+            display: block;
         }
 
-        /* Container com Nome da Galeria, Parágrafo de Apresentação e Botão*/
+        /* Mobile - Container com Nome da Galeria, Parágrafo de Apresentação e Botão*/
         &__container-texts {
-            @include flexCenter(column);
-            
+            display: flex;        
             align-items: start;
             justify-content: start;
-            gap: 1.5rem;
-
-            margin: 6rem 2.5rem 2.5rem 24rem;
+            flex-direction: column;
+            gap: 0;
+            margin: 64vw 2rem 2.5rem 2rem;
             padding: 0;
-            width: calc(100% - 26.5rem);       
+            width: 90%;       
         }
     
         &__h1 {
+            padding-bottom: 1rem;
             color: black;
             mix-blend-mode: darken;
         }
@@ -646,24 +637,27 @@ $desktop-big: 1920px; */
             @include flexCenter(column);
             align-items: start;
             justify-content: start;
-
             position: relative;
+            margin-top: 1rem;
             padding: 0;
+        }
+
+        &__btn-right {
+            width: 16.875rem;
+            height: 4.5rem;
+            position: relative;
+            margin-top: 2rem;
         }
     }
 
     /* Mobile */
     .main {
         margin: 0 auto;
-        width: 89.71%;
-        height: 147.26vw;
+        width: 90vw;
+        height: min-content;
         display: grid;
-        grid-template-columns: 40.64% auto 40.64%;
-        grid-template-rows: 52.08vw auto 51.56vw;
-        grid-template-areas:
-            'article1 img1 img1'
-            'img2 img2 img3'
-            'img2 img2 article2';
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(fr);
         grid-gap: 11px;
         
         &__article {
@@ -673,7 +667,7 @@ $desktop-big: 1920px; */
         /* Página Home */
         /* Article 1 - fundo branco e letras escuras */
         &__article-1 {
-            padding-right: 2rem;
+            padding: 1rem;
         }
     
         /* Página Home */
@@ -682,53 +676,50 @@ $desktop-big: 1920px; */
             padding: 1rem;
         }
         
-        &__img {
+        &__img, &__img--tablet {
             display: none;
         }
 
         &__img--mobile {
-            display: none;
-        }
-
-        &__img--tablet {
             display: block;
             margin: 0;
             width: 100%;
             object-fit: cover;
         }
     
-        &__img1--tablet {
+        /*
+        &__img1--mobile {
             grid-area: img1;
         }
     
-        &__img2--tablet {
+        &__img2--mobile {
             height: 100%;
             grid-area: img2;
         }
     
-        &__img3--tablet {
+        &__img3--mobile {
             grid-area: img3;
-        }
+        } */
 
-        /* Página Localização */
+        /* Mobile -  Página Localização */
 
-        /* Botão de Voltar */
+        /* Mobile - Botão de Voltar */
         &__btn-left {
             margin: 0 0 0 2.5rem;
         }
     
-        /* Mapa */
-        &__map-jpg, &__map--mobile {
+        /* Mobile - Mapa */
+        &__map-jpg, &__map--tablet {
             display: none;
         }
 
-        &__map--tablet {
+        &__map--mobile {
             display: block;
             margin: 0 auto;
             object-fit: fill;
         }
     
-        /* Article 3 - fundo preto e letras brancas */
+        /* Mobile - Article 3 - fundo preto e letras brancas */
         &__article-3 {
             height: 56.77vw;
             justify-content: flex-start;
@@ -761,20 +752,17 @@ $desktop-big: 1920px; */
        /* FALTA TERMINAR*/
         /* Footer da Página Localização */
         &--location {
-            @extend .footer;
     
             margin-top: 0;
             background-color: $cor-realce;
         }
     
         &__logo--location {
-            @extend .footer__logo;
     
             color: $cor-preto;
         }
     
         &__adress--location {
-            @extend .footer__adress;
     
             color: $cor-preto;
         }
@@ -784,19 +772,16 @@ $desktop-big: 1920px; */
         }
     
         &__icon--location {
-            @extend .footer__icon;
     
             color: $cor-preto;
         }
     
         &__icon--location:hover {
-            @extend .footer__icon;
     
             color: $cor-branco;
         }
     
         &__adr--location:hover {
-            @extend .footer__adr;
     
             color: $cor-branco;
         }
@@ -816,6 +801,3 @@ $desktop-big: 1920px; */
       transition-delay: 0s !important;
     }
 }
-
-
-  
