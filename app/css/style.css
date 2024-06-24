@@ -288,6 +288,9 @@ body {
   color: white;
   z-index: 2;
 }
+.main__map--tablet, .main__map--mobile {
+  display: none;
+}
 .main__map-jpg {
   margin: 0 auto;
   -o-object-fit: contain;
@@ -404,8 +407,6 @@ $tablet: 768px;
 $desktop: 1200px;
 $desktop-big: 1920px; */
 /* Media Queries */
-/* Desktop ou TV grande */
-/* Desktop*/
 /* Tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .header {
@@ -477,12 +478,10 @@ $desktop-big: 1920px; */
     /* Article 1 - fundo branco e letras escuras */
     /* Página Home */
     /* Article 2 - fundo preto e letras brancas */
-    /* FALTA COMPLETAR */
     /* Página Localização */
     /* Botão de Voltar */
     /* Mapa */
     /* Article 3 - fundo preto e letras brancas */
-    /* Endereço */
   }
   .main__article .main__article {
     display: flex;
@@ -521,6 +520,7 @@ $desktop-big: 1920px; */
     display: none;
   }
   .main__img--tablet {
+    display: block;
     margin: 0;
     width: 100%;
     -o-object-fit: cover;
@@ -536,70 +536,27 @@ $desktop-big: 1920px; */
   .main__img3--tablet {
     grid-area: img3;
   }
-  .main--location {
-    position: relative;
-    margin: 0 auto;
-    background-color: #444444;
-  }
   .main__btn-left {
-    position: absolute;
-    margin: 0 10.625rem;
-    background: linear-gradient(to right, #d5966c 20%, #151515 20%);
-    transition: all 0.3s ease-in-out;
+    margin: 0 0 0 2.5rem;
   }
-  .main__btn-left:hover {
-    background: linear-gradient(to right, #151515 20%, #d5966c 20%);
+  .main__map-jpg, .main__map--mobile {
+    display: none;
   }
-  .main__btn-text {
-    top: 0;
-    right: 5%;
-    text-align: right;
-  }
-  .main__btn-svg-left {
-    position: absolute;
-    width: 5%;
-    height: 40%;
-    top: 30%;
-    left: 7.5%;
+  .main__map--tablet {
     display: block;
-    color: white;
-    z-index: 2;
-  }
-  .main__map-jpg {
     margin: 0 auto;
-    -o-object-fit: contain;
-       object-fit: contain;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
   .main__article-3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+    height: 56.77vw;
+    justify-content: flex-start;
     align-items: start;
-    padding: 4.25rem 6.375rem;
-    background-color: #151515;
+    padding: 2.5rem;
   }
   .main__section-adress {
-    padding-top: 2.125rem;
-    padding-left: 19.125rem;
-  }
-  .main__h2-2 {
-    text-transform: uppercase;
-    color: white;
-  }
-  .main__h3--location {
-    font-family: "Big Shoulders Display", sans-serif;
-    font-size: clamp(1.5rem, 1.2994rem + 0.9172vw, 2.4rem);
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: 0.1vw;
-    text-transform: uppercase;
-    color: #d5966c;
-  }
-  .main__paragraph--location {
-    padding-top: 4.25rem;
-    color: white;
+    padding-top: 2.5rem;
+    padding-left: 2.5rem;
   }
   .footer, .footer--location {
     height: 28.125vw;
