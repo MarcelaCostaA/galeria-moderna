@@ -56,23 +56,9 @@ $ls-adress: 0.05vw;
 
 /* Breakpoints */
 $mobile: 350px;
+$mobileX: calc(768px - 1px);
 $tablet: 768px;
+$tabletX: calc(1200px - 1px);
 $desktop: 1200px;
-$desktop-big: 1920px;
 
 
-@media screen and (max-width: ($tablet - 1px)) {
-
-}
-
-@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
-
-}
-
-@media screen and (min-width: $desktop) and (max-width: ($desktop-big - 1px)) {
-
-}
-
-@media screen and (min-width: $desktop-big) {
-
-}

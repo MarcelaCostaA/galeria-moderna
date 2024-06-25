@@ -163,7 +163,7 @@ body {
     }
 
     /* Desktop - Página Home */
-    /* Article 1 - fundo branco e letras escuras */
+    /* Desktop - Article 1 - fundo branco e letras escuras */
     &__article-1 {
         padding-right: $p-patternx2;
         grid-area: 'article1';
@@ -179,7 +179,7 @@ body {
     }
 
     /* Desktop - Página Home */
-    /* Article 2 - fundo preto e letras brancas */
+    /* Desktop - Article 2 - fundo preto e letras brancas */
     &__article-2 {
         padding: $p-pattern;
         grid-area: 'article2';
@@ -262,8 +262,9 @@ body {
     }
 
     &__map-jpg {
+        width: 100vw;
         margin: 0 auto;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     /* Desktop - Article 3 - fundo preto e letras brancas */
@@ -286,7 +287,7 @@ body {
         color: $cor-branco;
     }
 
-    /* Endereço */
+    /* Desktop - Endereço */
     &__h3--location {
         font-family: $ff-titulo;
         font-size: $fs-logo;
@@ -360,6 +361,7 @@ body {
 
     /* Desktop - Footer da Página Localização */
     &--location {
+        @extend .footer;
 
         margin-top: 0;
         background-color: $cor-realce;
@@ -402,14 +404,16 @@ body {
 
 /* Breakpoints - do arquivo partials _variables.scss
 $mobile: 350px;
+$mobileX: calc(768px - 1px);
 $tablet: 768px;
+$tabletX: calc(1200px - 1px);
 $desktop: 1200px;
-$desktop-big: 1920px; */
+*/
 
 
 /* Media Queries */
 /* Tablet*/
-@media only screen and (min-width: $tablet) and  (max-width: calc(1200px - 1px)) {
+@media only screen and (min-width: $tablet) and  (max-width: $tabletX) {
 
     /* Tablet */
     .header {
@@ -493,14 +497,14 @@ $desktop-big: 1920px; */
             @include articles;
         }
     
-        /* Página Home */
-        /* Article 1 - fundo branco e letras escuras */
+        /* Tablet - Página Home */
+        /* Tablet - Article 1 - fundo branco e letras escuras */
         &__article-1 {
             padding-right: 2rem;
         }
     
-        /* Página Home */
-        /* Article 2 - fundo preto e letras brancas */
+        /* Tablet - Página Home */
+        /* Tablet - Article 2 - fundo preto e letras brancas */
         &__article-2 {
             padding: 1rem;
         }
@@ -533,25 +537,26 @@ $desktop-big: 1920px; */
             grid-area: img3;
         }
 
-        /* Página Localização */
+        /* Tablet - Página Localização */
 
-        /* Botão de Voltar */
+        /* Tablet - Botão de Voltar */
         &__btn-left {
             margin: 0 0 0 2.5rem;
         }
     
-        /* Mapa */
+        /* Tablet - Mapa */
         &__map-jpg, &__map--mobile {
             display: none;
         }
 
         &__map--tablet {
+            width: 100vw;
             display: block;
             margin: 0 auto;
-            object-fit: fill;
+            object-fit: cover;
         }
     
-        /* Article 3 - fundo preto e letras brancas */
+        /* Tablet - Article 3 - fundo preto e letras brancas */
         &__article-3 {
             height: 56.77vw;
             justify-content: flex-start;
@@ -572,7 +577,7 @@ $desktop-big: 1920px; */
         margin-top: 7.5rem;
         padding: 3rem;
     
-        /* Footer do Página Home*/
+        /* Tablet - Footer do Página Home*/
         &__logo {
             width: 10rem;
         }
@@ -580,23 +585,45 @@ $desktop-big: 1920px; */
         &__adress {
             width: 30.5rem;
         }
+
+        /* Tablet - Footer da Página Localização */
+        &--location {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            height: 28.125vw;
+            margin-top: 0;
+            padding: 3rem;
+            background-color: $cor-realce;
+        }
+
+        &__logo--location {
+            width: 10rem;
+            color: $cor-preto;
+        }
+
+        &__adress--location {
+            width: 30.5rem;
+            color: $cor-preto;
+        }
     
     }
     
 }
 
 /* Mobile*/
-@media only screen and (min-width: $mobile) and  (max-width: calc(768px - 1px)) {
+@media only screen and (min-width: $mobile) and  (max-width: $mobileX) {
     
-    /* Mobile */
+    /* Mobile Header*/
     .header {
         display: flex;
         justify-content: start;
         align-items: start;
         width: 100%;
-        height: 180vw;
+        height: 46rem;
         position: relative;
-        margin-bottom: 7.5rem;
+        margin-bottom: 2.5rem;
         
         /* Mobile - Background Hero */
         &__container {
@@ -612,6 +639,7 @@ $desktop-big: 1920px; */
         }
 
         &__img--mobile {
+            width: 100vw;
             display: block;
         }
 
@@ -650,13 +678,19 @@ $desktop-big: 1920px; */
         }
     }
 
-    /* Mobile */
+    /* Mobile Main*/
     .main {
-        margin: 0 11px;
+        margin: 0 5vw;
         width: 100%;
         height: min-content;
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-areas: 
+        'img1'
+        'article1'
+        'img2'
+        'article2'
+        'img3';
+        grid-template-columns: 90vw;
         grid-auto-rows: minmax(200px, auto);
         grid-gap: 11px;
         
@@ -664,14 +698,15 @@ $desktop-big: 1920px; */
             @include articles;
         }
     
-        /* Página Home */
-        /* Article 1 - fundo branco e letras escuras */
+        /* Mobile - Página Home */
+        /* Mobile - Article 1 - fundo branco e letras escuras */
         &__article-1 {
-            padding: 1rem;
+            margin: 0 0 -1rem 0;
+            padding: 0.5rem 0.5rem 0 0.5rem;
         }
     
-        /* Página Home */
-        /* Article 2 - fundo preto e letras brancas */
+        /* Mobile - Página Home */
+        /* Mobile - Article 2 - fundo preto e letras brancas */
         &__article-2 {
             padding: 1rem;
         }
@@ -687,28 +722,13 @@ $desktop-big: 1920px; */
             object-fit: cover;
         }
     
-        
-        &__img1--mobile {
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            width: 91.4666vw;
-            height: 85.333vw;
-        }
-        /*
-        &__img2--mobile {
-            height: 100%;
-            grid-area: img2;
-        }
-    
-        &__img3--mobile {
-            grid-area: img3;
-        } */
-
         /* Mobile -  Página Localização */
-
         /* Mobile - Botão de Voltar */
         &__btn-left {
-            margin: 0 0 0 2.5rem;
+            position: absolute;
+            left: 0;
+            margin: 0;
+            z-index: 2;
         }
     
         /* Mobile - Mapa */
@@ -717,76 +737,77 @@ $desktop-big: 1920px; */
         }
 
         &__map--mobile {
+            width: 100vw;
             display: block;
             margin: 0 auto;
-            object-fit: fill;
+            object-fit: cover;
         }
     
         /* Mobile - Article 3 - fundo preto e letras brancas */
         &__article-3 {
-            height: 56.77vw;
-            justify-content: flex-start;
+            height: 36rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
             align-items: start;
-            padding: 2.5rem;
         }
     
         &__section-adress {
-            padding-top: 2.5rem;
-            padding-left: 2.5rem;
+            padding: 2rem 0;
         }
     
     }
 
-    /* Mobile */
+    /* Mobile Footer*/
     .footer {  
-        height: 28.125vw;
+        display: flex;
+        flex-direction: column;
+        height: 21rem;
         margin-top: 7.5rem;
-        padding: 3rem;
+        padding: 3rem 2rem;
     
-        /* Footer do Página Home*/
+        /* Mobile - Footer do Página Home*/
         &__logo {
             width: 10rem;
         }
     
         &__adress {
-            width: 30.5rem;
+            width: 21rem;
+            padding-top: 1.5rem;
+        }
+
+    
+        &__icon {
+            padding: 1.5rem $p-small 0 0;
         }
     
-       /* FALTA TERMINAR*/
-        /* Footer da Página Localização */
+        /* Mobile - Footer da Página Localização */
         &--location {
-    
+            display: flex;
+            flex-direction: column;
+            height: 21rem;
             margin-top: 0;
+            padding: 3rem 2rem;
             background-color: $cor-realce;
         }
     
         &__logo--location {
-    
-            color: $cor-preto;
+            width: 10rem;
         }
     
         &__adress--location {
-    
-            color: $cor-preto;
+            width: 21rem;
+            padding-top: 1.5rem;
         }
-    
-        &__adr--location {
-            @extend .footer__adr;
+
+        &__social {
+            justify-content: start;
         }
     
         &__icon--location {
-    
+            padding: 1.5rem $p-small 0 0;
             color: $cor-preto;
-        }
-    
-        &__icon--location:hover {
-    
-            color: $cor-branco;
-        }
-    
-        &__adr--location:hover {
-    
-            color: $cor-branco;
         }
     }
     

@@ -189,14 +189,14 @@ body {
   grid-template-areas: "article1 img1 img1" "img2 img2 img3" "img2 img2 article2";
   grid-gap: 2.125rem;
   /* Desktop - Página Home */
-  /* Article 1 - fundo branco e letras escuras */
+  /* Desktop - Article 1 - fundo branco e letras escuras */
   /* Desktop - Página Home */
-  /* Article 2 - fundo preto e letras brancas */
+  /* Desktop - Article 2 - fundo preto e letras brancas */
   /* Desktop - Página Localização */
   /* Desktop - Botão de Voltar */
   /* Desktop - Mapa */
   /* Desktop - Article 3 - fundo preto e letras brancas */
-  /* Endereço */
+  /* Desktop - Endereço */
 }
 .main__article .main__article {
   display: flex;
@@ -294,9 +294,10 @@ body {
   display: none;
 }
 .main__map-jpg {
+  width: 100vw;
   margin: 0 auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main__article-3 {
   display: flex;
@@ -331,7 +332,7 @@ body {
 }
 
 /* Desktop */
-.footer {
+.footer, .footer--location {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -406,9 +407,11 @@ body {
 
 /* Breakpoints - do arquivo partials _variables.scss
 $mobile: 350px;
+$mobileX: calc(768px - 1px);
 $tablet: 768px;
+$tabletX: calc(1200px - 1px);
 $desktop: 1200px;
-$desktop-big: 1920px; */
+*/
 /* Media Queries */
 /* Tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -479,14 +482,14 @@ $desktop-big: 1920px; */
     grid-template-rows: 52.08vw auto 51.56vw;
     grid-template-areas: "article1 img1 img1" "img2 img2 img3" "img2 img2 article2";
     grid-gap: 11px;
-    /* Página Home */
-    /* Article 1 - fundo branco e letras escuras */
-    /* Página Home */
-    /* Article 2 - fundo preto e letras brancas */
-    /* Página Localização */
-    /* Botão de Voltar */
-    /* Mapa */
-    /* Article 3 - fundo preto e letras brancas */
+    /* Tablet - Página Home */
+    /* Tablet - Article 1 - fundo branco e letras escuras */
+    /* Tablet - Página Home */
+    /* Tablet - Article 2 - fundo preto e letras brancas */
+    /* Tablet - Página Localização */
+    /* Tablet - Botão de Voltar */
+    /* Tablet - Mapa */
+    /* Tablet - Article 3 - fundo preto e letras brancas */
   }
   .main__article .main__article {
     display: flex;
@@ -548,10 +551,11 @@ $desktop-big: 1920px; */
     display: none;
   }
   .main__map--tablet {
+    width: 100vw;
     display: block;
     margin: 0 auto;
-    -o-object-fit: fill;
-       object-fit: fill;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .main__article-3 {
     height: 56.77vw;
@@ -564,11 +568,12 @@ $desktop-big: 1920px; */
     padding-left: 2.5rem;
   }
   /* Tablet */
-  .footer {
+  .footer, .footer--location {
     height: 28.125vw;
     margin-top: 7.5rem;
     padding: 3rem;
-    /* Footer do Página Home*/
+    /* Tablet - Footer do Página Home*/
+    /* Tablet - Footer da Página Localização */
   }
   .footer__logo, .footer__logo--location {
     width: 10rem;
@@ -576,18 +581,36 @@ $desktop-big: 1920px; */
   .footer__adress, .footer__adress--location {
     width: 30.5rem;
   }
+  .footer--location {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    height: 28.125vw;
+    margin-top: 0;
+    padding: 3rem;
+    background-color: #d5966c;
+  }
+  .footer__logo--location {
+    width: 10rem;
+    color: #151515;
+  }
+  .footer__adress--location {
+    width: 30.5rem;
+    color: #151515;
+  }
 }
 /* Mobile*/
 @media only screen and (min-width: 350px) and (max-width: 767px) {
-  /* Mobile */
+  /* Mobile Header*/
   .header {
     display: flex;
     justify-content: start;
     align-items: start;
     width: 100%;
-    height: 180vw;
+    height: 46rem;
     position: relative;
-    margin-bottom: 7.5rem;
+    margin-bottom: 2.5rem;
     /* Mobile - Background Hero */
     /* Mobile - Container com Nome da Galeria, Parágrafo de Apresentação e Botão*/
   }
@@ -602,6 +625,7 @@ $desktop-big: 1920px; */
     display: none;
   }
   .header__img--mobile {
+    width: 100vw;
     display: block;
   }
   .header__container-texts {
@@ -636,29 +660,21 @@ $desktop-big: 1920px; */
     position: relative;
     margin-top: 2rem;
   }
-  /* Mobile */
+  /* Mobile Main*/
   .main {
-    margin: 0 11px;
+    margin: 0 5vw;
     width: 100%;
     height: -moz-min-content;
     height: min-content;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-areas: "img1" "article1" "img2" "article2" "img3";
+    grid-template-columns: 90vw;
     grid-auto-rows: minmax(200px, auto);
     grid-gap: 11px;
-    /* Página Home */
-    /* Article 1 - fundo branco e letras escuras */
-    /* Página Home */
-    /* Article 2 - fundo preto e letras brancas */
-    /*
-    &__img2--mobile {
-        height: 100%;
-        grid-area: img2;
-    }
-
-    &__img3--mobile {
-        grid-area: img3;
-    } */
+    /* Mobile - Página Home */
+    /* Mobile - Article 1 - fundo branco e letras escuras */
+    /* Mobile - Página Home */
+    /* Mobile - Article 2 - fundo preto e letras brancas */
     /* Mobile -  Página Localização */
     /* Mobile - Botão de Voltar */
     /* Mobile - Mapa */
@@ -689,7 +705,8 @@ $desktop-big: 1920px; */
     text-align: left;
   }
   .main__article-1 {
-    padding: 1rem;
+    margin: 0 0 -1rem 0;
+    padding: 0.5rem 0.5rem 0 0.5rem;
   }
   .main__article-2 {
     padding: 1rem;
@@ -704,67 +721,74 @@ $desktop-big: 1920px; */
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .main__img1--mobile {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    width: 91.4666vw;
-    height: 85.333vw;
-  }
   .main__btn-left {
-    margin: 0 0 0 2.5rem;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    z-index: 2;
   }
   .main__map-jpg, .main__map--tablet {
     display: none;
   }
   .main__map--mobile {
+    width: 100vw;
     display: block;
     margin: 0 auto;
-    -o-object-fit: fill;
-       object-fit: fill;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .main__article-3 {
-    height: 56.77vw;
-    justify-content: flex-start;
+    height: 36rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     align-items: start;
-    padding: 2.5rem;
   }
   .main__section-adress {
-    padding-top: 2.5rem;
-    padding-left: 2.5rem;
+    padding: 2rem 0;
   }
-  /* Mobile */
-  .footer {
-    height: 28.125vw;
+  /* Mobile Footer*/
+  .footer, .footer--location {
+    display: flex;
+    flex-direction: column;
+    height: 21rem;
     margin-top: 7.5rem;
-    padding: 3rem;
-    /* Footer do Página Home*/
-    /* FALTA TERMINAR*/
-    /* Footer da Página Localização */
+    padding: 3rem 2rem;
+    /* Mobile - Footer do Página Home*/
+    /* Mobile - Footer da Página Localização */
   }
   .footer__logo, .footer__logo--location {
     width: 10rem;
   }
   .footer__adress, .footer__adress--location {
-    width: 30.5rem;
+    width: 21rem;
+    padding-top: 1.5rem;
+  }
+  .footer__icon, .footer__icon--location, .footer__icon--location:hover {
+    padding: 1.5rem 1.0625rem 0 0;
   }
   .footer--location {
+    display: flex;
+    flex-direction: column;
+    height: 21rem;
     margin-top: 0;
+    padding: 3rem 2rem;
     background-color: #d5966c;
   }
   .footer__logo--location {
-    color: #151515;
+    width: 10rem;
   }
   .footer__adress--location {
-    color: #151515;
+    width: 21rem;
+    padding-top: 1.5rem;
+  }
+  .footer__social {
+    justify-content: start;
   }
   .footer__icon--location {
+    padding: 1.5rem 1.0625rem 0 0;
     color: #151515;
-  }
-  .footer__icon--location:hover {
-    color: white;
-  }
-  .footer__adr--location:hover {
-    color: white;
   }
 }
 /* Reduced Motion */
