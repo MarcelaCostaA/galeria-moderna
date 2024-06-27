@@ -108,7 +108,7 @@ body {
 }
 .header__h1 {
   font-family: "Big Shoulders Display", sans-serif;
-  font-size: clamp(3.125rem, 2.914rem + 3.8217vw, 7.5rem);
+  font-size: clamp(2.95rem, 2.914rem + 3.8217vw, 7.5rem);
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.15vw;
@@ -206,7 +206,7 @@ body {
 }
 .main__article .main__h2 {
   font-family: "Big Shoulders Display", sans-serif;
-  font-size: clamp(3.125rem, 2.8854rem + 1.0955vw, 4.2rem);
+  font-size: clamp(2.75rem, 2.8854rem + 1.0955vw, 4.2rem);
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.1vw;
@@ -499,7 +499,7 @@ $desktop: 1200px;
   }
   .main__article .main__h2 {
     font-family: "Big Shoulders Display", sans-serif;
-    font-size: clamp(3.125rem, 2.8854rem + 1.0955vw, 4.2rem);
+    font-size: clamp(2.75rem, 2.8854rem + 1.0955vw, 4.2rem);
     font-weight: 800;
     line-height: 1;
     letter-spacing: 0.1vw;
@@ -610,7 +610,7 @@ $desktop: 1200px;
     width: 100%;
     height: 46rem;
     position: relative;
-    margin-bottom: 2.5rem;
+    margin-bottom: 5rem;
     /* Mobile - Background Hero */
     /* Mobile - Container com Nome da Galeria, Parágrafo de Apresentação e Botão*/
   }
@@ -664,11 +664,12 @@ $desktop: 1200px;
   .main {
     margin: 0 5vw;
     width: 100%;
-    height: 100vh;
+    height: -moz-max-content;
+    height: max-content;
     display: grid;
-    grid-template-areas: "img1" "article1" "img2" "article2" "img3";
+    grid-template-areas: "img1" "article1" "img2" "img3" "article2";
     grid-template-columns: 90vw;
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: repeat(auto-fit, minmax(200px, auto));
     grid-gap: 11px;
     /* Mobile - Página Home */
     /* Mobile - Article 1 - fundo branco e letras escuras */
@@ -687,7 +688,7 @@ $desktop: 1200px;
   }
   .main__article .main__h2 {
     font-family: "Big Shoulders Display", sans-serif;
-    font-size: clamp(3.125rem, 2.8854rem + 1.0955vw, 4.2rem);
+    font-size: clamp(2.75rem, 2.8854rem + 1.0955vw, 4.2rem);
     font-weight: 800;
     line-height: 1;
     letter-spacing: 0.1vw;
@@ -704,7 +705,7 @@ $desktop: 1200px;
     text-align: left;
   }
   .main__article-1 {
-    margin: 0 0 -1rem 0;
+    margin: 0;
     padding: 0.5rem 0.5rem 0 0.5rem;
   }
   .main__article-2 {
@@ -719,6 +720,15 @@ $desktop: 1200px;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .main__img1--mobile {
+    grid-area: img1;
+  }
+  .main__img2--mobile {
+    grid-area: img2;
+  }
+  .main__img3--mobile {
+    grid-area: img3;
   }
   .main__btn-left {
     position: absolute;
