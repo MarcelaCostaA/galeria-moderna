@@ -682,7 +682,7 @@ $desktop: 1200px;
     .main {
         margin: 0 5vw;
         width: 100%;
-        height: min-content;
+        height: 100vh;
         display: grid;
         grid-template-areas: 
         'img1'

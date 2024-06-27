@@ -664,8 +664,7 @@ $desktop: 1200px;
   .main {
     margin: 0 5vw;
     width: 100%;
-    height: -moz-min-content;
-    height: min-content;
+    height: 100vh;
     display: grid;
     grid-template-areas: "img1" "article1" "img2" "article2" "img3";
     grid-template-columns: 90vw;
