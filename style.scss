@@ -682,7 +682,7 @@ $desktop: 1200px;
     .main {
         margin: 0 5vw;
         width: 100%;
-        height: max-content;
+        height: 100%; /* Alteração - height: max-content;*/
         display: grid;
         grid-template-areas: 
         'img1'
