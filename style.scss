@@ -623,7 +623,7 @@ $desktop: 1200px;
         width: 100%;
         height: 46rem;
         position: relative;
-        margin-bottom: 5rem;
+        margin-bottom: 2.5rem; /* Alteração */
         
         /* Mobile - Background Hero */
         &__container {
@@ -691,8 +691,8 @@ $desktop: 1200px;
         'img3'
         'article2';
         grid-template-columns: 90vw;
-        grid-auto-rows: repeat(auto-fit, minmax(200px, auto));
-        grid-gap: 11px;
+        grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto)); /* Alteração */
+        grid-gap: 1rem;  /* Alteração */
         
         &__article {
             @include articles;
