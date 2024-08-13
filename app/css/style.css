@@ -648,7 +648,7 @@ $desktop: 1200px;
     gap: 0;
     margin: 64vw 5vw 2.5rem 5vw;
     padding: 0;
-    width: 90%;
+    width: 90vw; /* IMPORTANTE!!! */
   }
   .header__h1 {
     padding-bottom: 1rem;
@@ -675,7 +675,7 @@ $desktop: 1200px;
   /* Mobile Main*/
   .main {
     margin: 0 5vw;
-    width: 100%;
+    width: 100vw;
     height: -moz-max-content;
     height: max-content;
     display: grid;
