@@ -478,7 +478,7 @@ $desktop: 1200px;
 
     /* Mobile Main*/
     .main {
-        margin: 0 5vw;
+        margin: 0 5vw 0 5vw;
         width: 100%;
         height: max-content;
         display: grid;
@@ -489,7 +489,7 @@ $desktop: 1200px;
         'img3'
         'article2';
         grid-template-columns: 90vw;
-        grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto)); /* Alteração */
+        grid-template-rows: 83.965vw 60vw 125.947vw 52.478vw 90vw; /* IMPORTANTE!!! grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto));  Alteração */
         grid-gap: 2rem;  /* Alteração */
         
         &__article {
@@ -691,7 +691,7 @@ $desktop: 1200px;
 
     /* Mobile Main*/
     .main {
-        margin: 0 5vw;
+        margin: 0 5vw 0 5vw; /* IMPORTANTE */
         width: 100%;
         height: max-content;
         display: grid;
@@ -702,7 +702,7 @@ $desktop: 1200px;
         'img3'
         'article2';
         grid-template-columns: 90vw;
-        grid-auto-rows: repeat(auto-fit, minmax(90vw, auto)); /* IMPORTANTE!!! Alteração para 90vw */
+        grid-template-rows: 83.965vw 60vw 125.947vw 52.478vw 90vw; /* IMPORTANTE!!! grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto));  Alteração */
         grid-gap: 2rem;  /* Alteração */
         
         &__article {
@@ -913,7 +913,7 @@ $desktop: 1200px;
 
     /* Mobile Main*/
     .main {
-        margin: 2rem 5vw;
+        margin: 2rem 5vw; // margin: 0 5vw 0 5vw;
         width: 100%;
         height: max-content;
         display: grid;
@@ -924,7 +924,7 @@ $desktop: 1200px;
         'img3'
         'article2';
         grid-template-columns: 90vw;
-        grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto)); /* Alteração */
+        grid-template-rows: 83.965vw 60vw 125.947vw 52.478vw 90vw; /* IMPORTANTE!!! grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto));  Alteração */
         grid-gap: 2rem;  /* Alteração */
         
         &__article {
