@@ -675,7 +675,7 @@ $desktop: 1200px;
   /* Mobile Main*/
   .main {
     margin: 0 5vw;
-    width: 100vw;
+    width: 100%;
     height: -moz-max-content;
     height: max-content;
     display: grid;
