@@ -402,7 +402,7 @@ body {
     }
 }
 
-/* Breakpoints - do arquivo partials _variables.scss
+/* Breakpoints - variáveis do arquivo  _variables.scss
 $mobile: 350px;
 $mobileX: calc(768px - 1px);
 $tablet: 768px;
@@ -411,7 +411,7 @@ $desktop: 1200px;
 */
 
 /* MobileXS - Até 349px*/
-@media only screen and  (max-width: $mobileXS) {
+@media only screen and  (max-width: 380px) {
     
     /* Mobile Header*/
     .header {
@@ -478,7 +478,8 @@ $desktop: 1200px;
 
     /* Mobile Main*/
     .main {
-        margin: 0 5vw 0 5vw;
+        margin: 0;
+        padding: 0 5vw;
         width: 100%;
         height: max-content;
         display: grid;
@@ -489,7 +490,7 @@ $desktop: 1200px;
         'img3'
         'article2';
         grid-template-columns: 90vw;
-        grid-template-rows: 83.965vw 60vw 125.947vw 52.478vw 90vw; /* IMPORTANTE!!! grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto));  Alteração */
+        grid-template-rows: 83.965vw 100vw 125.947vw 52.478vw 100vw; /* IMPORTANTE!!! grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto));  Alteração */
         grid-gap: 2rem;  /* Alteração */
         
         &__article {
@@ -500,7 +501,12 @@ $desktop: 1200px;
         /* Mobile - Article 1 - fundo branco e letras escuras */
         &__article-1 {
             margin: 0;
-            padding: 0.5rem 0.5rem 0 0.5rem;
+            padding: 0rem;
+        }
+
+
+        &__h2, &__h2-1 {
+            padding-top: 0;
         }
     
         /* Mobile - Página Home */
@@ -556,6 +562,7 @@ $desktop: 1200px;
         /* Mobile - Article 3 - fundo preto e letras brancas */
         &__article-3 {
             height: 40rem;
+            margin-bottom: 0;
             padding: 2rem;
             display: flex;
             flex-direction: column;
@@ -624,7 +631,7 @@ $desktop: 1200px;
 }
 
 /* MobileS - De 350px a 639px*/
-@media only screen and (min-width: $mobileS) and  (max-width: $mobileM) {
+@media only screen and (min-width: 381px) and  (max-width: 500px) {
     
     /* Mobile Header*/
     .header {
@@ -691,7 +698,8 @@ $desktop: 1200px;
 
     /* Mobile Main*/
     .main {
-        margin: 0 5vw 0 5vw; /* IMPORTANTE */
+        margin: 0 0 2rem 0; /* IMPORTANTE */
+        padding: 0 5vw;
         width: 100%;
         height: max-content;
         display: grid;
@@ -702,20 +710,22 @@ $desktop: 1200px;
         'img3'
         'article2';
         grid-template-columns: 90vw;
-        grid-template-rows: 83.965vw 60vw 125.947vw 52.478vw 90vw; /* IMPORTANTE!!! grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto));  Alteração */
+        grid-template-rows: 83.965vw 70vw 125.947vw 52.478vw 75vw; /* IMPORTANTE!!! grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto));  Alteração */
         grid-gap: 2rem;  /* Alteração */
         
         &__article {
             @include articles;
+
+            margin: 0;
         }
     
         /* Mobile - Página Home */
         /* Mobile - Article 1 - fundo branco e letras escuras */
         &__article-1 {
-            height: 90vw;  /* IMPORTANTE!!! Alteração para 90vw */
             margin: 0;
-            padding: 0;   /* IMPORTANTE!!! */
+            padding: 0rem;
         }
+
     
         /* Mobile - Página Home */
         /* Mobile - Article 2 - fundo preto e letras brancas */
@@ -724,12 +734,7 @@ $desktop: 1200px;
             padding: 1rem;
 
         }
-
-        &__h2-1 { /* IMPORTANTE!!! */
-            margin-top: 0; /* IMPORTANTE!!! */
-            padding-top: 0; /* IMPORTANTE!!! */
-        }
-        
+      
         &__img, &__img--tablet {
             display: none;
         }
@@ -777,12 +782,12 @@ $desktop: 1200px;
         /* Mobile - Article 3 - fundo preto e letras brancas */
         &__article-3 {
             height: 36rem;
+            margin-bottom: 0;
             padding: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: start;
             align-items: start;
-            margin-bottom: 2rem;
         }
     
         &__section-adress {
@@ -845,8 +850,8 @@ $desktop: 1200px;
     
 }
 
-/* MobileL - De 640px a 779px*/
-@media only screen and (min-width: $mobileL) and  (max-width: $mobileX) {
+/* MobileL - De 501px a 779px*/
+@media only screen and (min-width: 501px) and  (max-width: $mobileX) {
     
     /* Mobile Header*/
     .header {
@@ -854,7 +859,7 @@ $desktop: 1200px;
         justify-content: start;
         align-items: start;
         width: 100%;
-        height: 126vw; //IMPORTANTE - SE NÃO ROLAR, TESTAR COM 56REM
+        height: 140vw; //IMPORTANTE - SE NÃO ROLAR, TESTAR COM 56REM
         position: relative;
         //margin-bottom: 2.5rem; /* IMPORTANTE Alteração */
         
@@ -913,7 +918,8 @@ $desktop: 1200px;
 
     /* Mobile Main*/
     .main {
-        margin: 2rem 5vw; // margin: 0 5vw 0 5vw;
+        margin: 0; // margin: 0 5vw 0 5vw;
+        padding: 0 5vw;
         width: 100%;
         height: max-content;
         display: grid;
@@ -924,18 +930,24 @@ $desktop: 1200px;
         'img3'
         'article2';
         grid-template-columns: 90vw;
-        grid-template-rows: 83.965vw 60vw 125.947vw 52.478vw 90vw; /* IMPORTANTE!!! grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto));  Alteração */
+        grid-template-rows: 83.965vw 35vw 125.947vw 52.478vw 50vw; /* IMPORTANTE!!! grid-auto-rows: repeat(auto-fit, minmax(12.5rem, auto));  Alteração */
         grid-gap: 2rem;  /* Alteração */
         
         &__article {
             @include articles;
+
+            //margin: 0;
         }
     
         /* Mobile - Página Home */
         /* Mobile - Article 1 - fundo branco e letras escuras */
         &__article-1 {
             margin: 0;
-            padding: 0.5rem 0.5rem 0 0.5rem;
+            padding: 0;
+        }
+
+        &__h2, &__h2-1 {
+            padding-top: 0;
         }
     
         /* Mobile - Página Home */
@@ -992,6 +1004,7 @@ $desktop: 1200px;
         &__article-3 {
             height: 36rem;
             padding: 2rem;
+            margin-bottom: 0;
             display: flex;
             flex-direction: column;
             justify-content: start;
@@ -1058,8 +1071,6 @@ $desktop: 1200px;
     
 }
 
-
-/* Media Queries */
 /* Tablet - De 780px a 1199px*/
 @media only screen and (min-width: $tablet) and  (max-width: $tabletX) {
 
@@ -1259,8 +1270,6 @@ $desktop: 1200px;
     }
     
 }
-
-
 
 /* Reduced Motion */
 @media only screen and (prefers-reduced-motion) {
